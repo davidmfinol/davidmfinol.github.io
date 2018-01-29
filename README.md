@@ -1,2 +1,2 @@
-# davidmfinol.github.io
+# David Finol
 Portfolio Website
