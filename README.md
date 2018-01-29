@@ -1,7 +1,6 @@
-# Resume
-Resume and linkedin links to go at top
-
-# Game Projects
+# David Finol Game Projects
+Resume and linkedin link to go next to view on github.com
+Each game starts with pictures, has links, and ends with a short blurb.
 
 ## Card Game Simulator
 
