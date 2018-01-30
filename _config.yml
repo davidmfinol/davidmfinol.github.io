@@ -1,3 +1,21 @@
 theme: jekyll-theme-tactile
 title: David Finol
+resume_url: ./RESUME.pdf
 linkedin_url: https://www.linkedin.com/in/davidmfinol
+executables:
+  cgs_url: https://github.com/davidmfinol
+  crucible_url: https://github.com/davidmfinol
+  homebody_url: https://github.com/davidmfinol
+  romskip_saga_url: https://github.com/davidmfinol
+  galacticombat_url: https://github.com/davidmfinol
+  libnation_url: https://github.com/davidmfinol
+  finullinator_url: https://github.com/davidmfinol
+github:
+  cgs_url: https://github.com/davidmfinol
+  crucible_url: https://github.com/davidmfinol
+  homebody_url: https://github.com/davidmfinol
+  romskip_saga_url: https://github.com/davidmfinol
+  galacticombat_url: https://github.com/davidmfinol
+  libnation_url: https://github.com/davidmfinol
+  finullinator_url: https://github.com/davidmfinol
+  
