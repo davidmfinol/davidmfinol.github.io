@@ -1,7 +1,7 @@
 # Game Projects
-Resume and linkedin link to go next to view on github.com
+My resume and linkedin detail my work experience on enterprise web applications, but this portfolio website details the game projects I have pursued outside of a corporate structure.
 
-Each game starts with pictures, has links, and ends with a short blurb.
+Each game below includes a windows executable in a zip file, along with a link to the github repository that contains all of the source code.
 
 ## Card Game Simulator
 
