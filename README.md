@@ -23,7 +23,7 @@ As one of the two programmers on this two day project, I coded how the sound pro
 ## Finullinator
 ![Finullinator](https://github.com/davidmfinol/Finullinator/raw/master/Finullinator.jpg) 
 
-[Executable](https://github.com/davidmfinol/Finullinator/raw/master/Finullinator.jar) 
+[Executable JAR](https://github.com/davidmfinol/Finullinator/raw/master/Finullinator.jar) 
 
 [Source](https://github.com/davidmfinol/Finullinator)
 
