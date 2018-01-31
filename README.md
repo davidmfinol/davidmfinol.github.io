@@ -21,3 +21,5 @@ As one of the two programmers on this two day project, I coded how the sound pro
 ## LIBnation
 
 ## Finullinator
+
+This incomplete project was my first attempt at creating my own game engine. There may not be much worth examining in this project, but it holds a special place in my heart.
