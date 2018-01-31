@@ -22,4 +22,8 @@ As one of the two programmers on this two day project, I coded how the sound pro
 
 ## Finullinator
 
+Executable: [https://github.com/davidmfinol/Finullinator/raw/master/Finullinator.jar](https://github.com/davidmfinol/Finullinator/raw/master/Finullinator.jar) 
+
+Source: [https://github.com/davidmfinol/Finullinator](https://github.com/davidmfinol/Finullinator)
+
 This incomplete project was my first attempt at creating my own game engine. There may not be much worth examining in this project, but it holds a special place in my heart.
