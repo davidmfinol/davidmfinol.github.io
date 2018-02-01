@@ -21,8 +21,6 @@ As one of the two programmers on this two day project, I coded how the sound pro
 ## LIBnation
 ![LIBnation](https://raw.githubusercontent.com/davidmfinol/LIBnationGame/master/LIBnationGame.png)
 
-[JNLP Webpage](https://github.com/davidmfinol/LIBnationGame/raw/master/LIBnationGame.html)
-
 [Source](https://github.com/davidmfinol/LIBnationGame)
 
 The first game I ever made. It doesn't get much simpler than this: 2 2D characters on a single plane, with basic movements, attack, and health. Originally created as a java applet to run in-browser, it has been updated to use JNLP, as applets have deprecated.
