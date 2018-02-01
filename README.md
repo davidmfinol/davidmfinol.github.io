@@ -17,6 +17,11 @@ As one of the two programmers on this two day project, I coded how the sound pro
 ## Romskip Saga
 
 ## GalactiCombat
+[Windows Executable ZIP](https://github.com/davidmfinol/GalactiCombat)
+
+[Source](https://github.com/davidmfinol/GalactiCombat)
+
+The first game project I worked on as part of the UT Game Development program. As part of a 3 person team, I wrote all the code for movement, networking, and AI.
 
 ## LIBnation
 ![LIBnation](https://raw.githubusercontent.com/davidmfinol/LIBnationGame/master/LIBnationGame.png)
