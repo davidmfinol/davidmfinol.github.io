@@ -17,7 +17,7 @@ As one of the two programmers on this two day project, I coded how the sound pro
 ## Romskip Saga
 
 ## GalactiCombat
-[GalactiCombat](GalactiCombat.png) 
+![GalactiCombat](GalactiCombat.png) 
 
 [Windows Executable ZIP](https://github.com/davidmfinol/GalactiCombat)
 
