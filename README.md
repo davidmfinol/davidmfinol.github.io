@@ -11,7 +11,7 @@ My current project.
 ## Crucible
 ![Crucible](GalactiCombat.png) 
 
-[Windows Executable ZIP](Crucible.zip) 
+[Windows Executable ZIP](resources/Crucible.zip) 
 
 [Source](https://github.com/davidmfinol/Crucible) 
 
@@ -29,7 +29,7 @@ As one of the two programmers on this two day project, I coded how the sound pro
 ## Romskip Saga
 ![Romksip Saga](GalactiCombat.png) 
 
-[Windows Executable ZIP](RomskipSaga.zip)
+[Windows Executable ZIP](resources/RomskipSaga.zip)
 
 [Source](https://github.com/davidmfinol/Spikings-A_Tale_Of_Space_Vikings)
 
@@ -38,7 +38,7 @@ This tale of space vikings comes from the final capstone course of the UT Game D
 ## GalactiCombat
 ![GalactiCombat](GalactiCombat.png) 
 
-[Windows Executable ZIP](GalactiCombat.zip)
+[Windows Executable ZIP](resources/GalactiCombat.zip)
 
 [Source](https://github.com/davidmfinol/GalactiCombat)
 
