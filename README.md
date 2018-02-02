@@ -6,7 +6,7 @@ The resume and LinkedIn links detail my work experience on enterprise web applic
 
 [Website](https://cardgamesim.finoldigital.com)
 
-My current project! Please check out https://cardgamesim.finoldigital.com!
+My current project! I have spent the past half-year developing an extensible system of categorizing cards and playing them in a virtual space. CGS is available on Android/iOS. Please check out [https://cardgamesim.finoldigital.com](https://cardgamesim.finoldigital.com)!
 
 ## Crucible
 ![Crucible](resources/Crucible.jpg) 
