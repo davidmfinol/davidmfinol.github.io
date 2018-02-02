@@ -2,8 +2,20 @@
 The resume and LinkedIn links detail my work experience on enterprise web applications, but this portfolio website details the game projects I have pursued outside of a corporate structure.
 
 ## Card Game Simulator
+![CGS](https://cardgamesim.finoldigital.com/screenshots/mainmenu.png)
+
+[Website](https://cardgamesim.finoldigital.com)
+
+My current project.
 
 ## Crucible
+![Crucible](GalactiCombat.png) 
+
+[Windows Executable ZIP](Crucible.zip) 
+
+[Source](https://github.com/davidmfinol/Crucible) 
+
+Crucible is my first large-scale project.
 
 ## Homebody
 ![Homebody](https://github.com/davidmfinol/GGJ18/blob/master/Assets/Textures/ui_titleCard7.png?raw=true) 
@@ -15,6 +27,13 @@ The resume and LinkedIn links detail my work experience on enterprise web applic
 As one of the two programmers on this two day project, I coded how the sound projectile moved and interacted with obstacles in game. I also handled the basic animations of the moving characters, and worked with the artists to ensure the level was laid out how they envisioned.
 
 ## Romskip Saga
+![Romksip Saga](GalactiCombat.png) 
+
+[Windows Executable ZIP](RomskipSaga.zip)
+
+[Source](https://github.com/davidmfinol/Spikings-A_Tale_Of_Space_Vikings)
+
+This tale of space vikings comes from the final capstone course of the UT Game Development program. In this project, I worked with the artists and other programmers to layout the 2D assets in-game, with appropriate mechanics. In particular, I developed all the AI for the enemies in the game. I also played a large role in defining the actions the player character could take, such as climbing over platforms, and jumping off cliffs.
 
 ## GalactiCombat
 ![GalactiCombat](GalactiCombat.png) 
