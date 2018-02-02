@@ -6,16 +6,16 @@ The resume and LinkedIn links detail my work experience on enterprise web applic
 
 [Website](https://cardgamesim.finoldigital.com)
 
-My current project.
+My current project! Please check out https://cardgamesim.finoldigital.com!
 
 ## Crucible
-![Crucible](GalactiCombat.png) 
+![Crucible](resources/Crucible.jpg) 
 
 [Windows Executable ZIP](resources/Crucible.zip) 
 
 [Source](https://github.com/davidmfinol/Crucible) 
 
-Crucible is my first large-scale project.
+Crucible is my first large-scale project. Originally titled "The Runners", this passion project turned out to be a bit of a crucible for myself and the co-lead. We spent over a year in active development on this project, even taking it into the Longhorn Startup program. As a mobile game, we developed a unique control system that allowed for stealth platforming using a combination of swiping on the screen. The AI for this game turned out to be the largest hurdle, as the core gameplay hinged on having enemy robots that were able to effectively traverse through 2D platforming in order to hunt to down the player-character.
 
 ## Homebody
 ![Homebody](https://github.com/davidmfinol/GGJ18/blob/master/Assets/Textures/ui_titleCard7.png?raw=true) 
@@ -27,7 +27,7 @@ Crucible is my first large-scale project.
 As one of the two programmers on this two day project, I coded how the sound projectile moved and interacted with obstacles in game. I also handled the basic animations of the moving characters, and worked with the artists to ensure the level was laid out how they envisioned.
 
 ## Romskip Saga
-![Romksip Saga](GalactiCombat.png) 
+![Romksip Saga](resources/RomskipSaga.jpg) 
 
 [Windows Executable ZIP](resources/RomskipSaga.zip)
 
@@ -36,7 +36,7 @@ As one of the two programmers on this two day project, I coded how the sound pro
 This tale of space vikings comes from the final capstone course of the UT Game Development program. In this project, I worked with the artists and other programmers to layout the 2D assets in-game, with appropriate mechanics. In particular, I developed all the AI for the enemies in the game. I also played a large role in defining the actions the player character could take, such as climbing over platforms, and jumping off cliffs.
 
 ## GalactiCombat
-![GalactiCombat](GalactiCombat.png) 
+![GalactiCombat](resources/GalactiCombat.png) 
 
 [Windows Executable ZIP](resources/GalactiCombat.zip)
 
