@@ -20,11 +20,11 @@ Crucible is my first large-scale project. Originally titled "The Runners", this 
 ## Homebody
 ![Homebody](https://github.com/davidmfinol/GGJ18/blob/master/Assets/Textures/ui_titleCard7.png?raw=true) 
 
-[Website](https://globalgamejam.org/2018/games/homebody) 
+[Windows Executable ZIP](https://drive.google.com/uc?id=1ovrBIIe4bbCacYsrXTuk-tT-zBBLv2a3&export=download) 
 
 [Source](https://github.com/davidmfinol/GGJ18) 
 
-As one of the two programmers on this two day project, I coded how the sound projectile moved and interacted with obstacles in game. I also handled the basic animations of the moving characters, and worked with the artists to ensure the level was laid out how they envisioned.
+As one of the two programmers on this two day Global Game Jam project, I coded how the sound projectile moved and interacted with obstacles in game. I also handled the basic animations of the moving characters, and worked with the artists to ensure the level was laid out how they envisioned.
 
 ## Romskip Saga
 ![Romksip Saga](resources/RomskipSaga.jpg) 
