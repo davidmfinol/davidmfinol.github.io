@@ -20,7 +20,7 @@ Crucible is my first large-scale project. Originally titled "The Runners", this 
 ## Homebody
 ![Homebody](https://github.com/davidmfinol/GGJ18/blob/master/Assets/Textures/ui_titleCard7.png?raw=true) 
 
-[Windows Executable ZIP](https://drive.google.com/uc?id=1ovrBIIe4bbCacYsrXTuk-tT-zBBLv2a3&export=download) 
+[Windowsx64 Executable ZIP](https://drive.google.com/uc?id=1ovrBIIe4bbCacYsrXTuk-tT-zBBLv2a3&export=download) 
 
 [Source](https://github.com/davidmfinol/GGJ18) 
 
@@ -29,7 +29,7 @@ As one of the two programmers on this two day Global Game Jam project, I coded h
 ## Romskip Saga
 ![Romksip Saga](resources/RomskipSaga.jpg) 
 
-[Windows Executable ZIP](resources/RomskipSaga.zip)
+[Windowsx64 Executable ZIP](https://drive.google.com/uc?id=12o87ILuhbaI6FuFteKO1Jt7vH8ZgbcnM&export=download)
 
 [Source](https://github.com/davidmfinol/Spikings-A_Tale_Of_Space_Vikings)
 
