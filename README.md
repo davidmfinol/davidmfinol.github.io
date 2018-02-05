@@ -27,7 +27,7 @@ Crucible is my first large-scale project. Originally titled "The Runners", this 
 As one of the two programmers on this two day Global Game Jam project, I coded how the sound projectile moved and interacted with obstacles in game. I also handled the basic animations of the moving characters, and worked with the artists to ensure the level was laid out how they envisioned.
 
 ## Romskip Saga
-![Romksip Saga](resources/RomskipSaga.jpg) 
+![Romksip Saga](https://raw.githubusercontent.com/davidmfinol/Spikings-A_Tale_Of_Space_Vikings/master/Assets/UI/Romskip%20Logo.jpg) 
 
 [Windowsx64 Executable ZIP](https://drive.google.com/uc?id=12o87ILuhbaI6FuFteKO1Jt7vH8ZgbcnM&export=download)
 
