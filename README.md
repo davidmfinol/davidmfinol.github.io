@@ -9,9 +9,7 @@ The resume and LinkedIn links detail my work experience on enterprise web applic
 My current project! I have spent the past half-year developing an extensible system of categorizing cards and playing them in a virtual space. CGS is available on Android/iOS. Please check out [https://cardgamesim.finoldigital.com](https://cardgamesim.finoldigital.com)!
 
 ## Crucible
-![Crucible](resources/Crucible.jpg) 
-
-[Windows Executable ZIP](resources/Crucible.zip) 
+![Crucible](Crucible.jpg)
 
 [Source](https://github.com/davidmfinol/Crucible) 
 
@@ -36,9 +34,7 @@ As one of the two programmers on this two day Global Game Jam project, I coded h
 This tale of space vikings comes from the final capstone course of the UT Game Development program. In this project, I worked with the artists and other programmers to layout the 2D assets in-game, with appropriate mechanics. In particular, I developed all the AI for the enemies in the game. I also played a large role in defining the actions the player character could take, such as climbing over platforms, and jumping off cliffs.
 
 ## GalactiCombat
-![GalactiCombat](resources/GalactiCombat.png) 
-
-[Windows Executable ZIP](resources/GalactiCombat.zip)
+![GalactiCombat](GalactiCombat.png)
 
 [Source](https://github.com/davidmfinol/GalactiCombat)
 
