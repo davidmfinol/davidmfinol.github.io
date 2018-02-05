@@ -2,7 +2,7 @@
 The resume and LinkedIn links detail my work experience on enterprise web applications, but this portfolio website details the game projects I have pursued outside of a corporate structure.
 
 ## Card Game Simulator
-![CGS](https://cardgamesim.finoldigital.com/screenshots/mainmenu.png)
+![CGS](https://cardgamesim.finoldigital.com/screenshots/CGS%20Logo.png)
 
 [Website](https://cardgamesim.finoldigital.com)
 
