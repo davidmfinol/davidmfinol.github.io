@@ -11,6 +11,8 @@ My current project! I have spent the past half-year developing an extensible sys
 ## Crucible
 ![Crucible](Crucible.jpg)
 
+[YouTube Trailer](https://youtu.be/4rTT_eflPGs)
+
 [Source](https://github.com/davidmfinol/Crucible) 
 
 Crucible is my first large-scale project. Originally titled "The Runners", this passion project turned out to be a bit of a crucible for myself and the co-lead. We spent over a year in active development on this project, even taking it into the Longhorn Startup program. As a mobile game, we developed a unique control system that allowed for stealth platforming using a combination of swiping on the screen. The AI for this game turned out to be the largest hurdle, as the core gameplay hinged on having enemy robots that were able to effectively traverse through 2D platforming in order to hunt down the player-character.
