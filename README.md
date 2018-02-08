@@ -38,6 +38,8 @@ This tale of space vikings comes from the final capstone course of the UT Game D
 ## GalactiCombat
 ![GalactiCombat](GalactiCombat.png)
 
+[Windowsx86 Executable ZIP](https://drive.google.com/uc?id=1uWb3uhPq_-aKXi-P1tcbjS8I0dOGiUTU&export=download)
+
 [Source](https://github.com/davidmfinol/GalactiCombat)
 
 The first game project I worked on as part of the UT Game Development program. As part of a team of 3 programmers, I wrote all the code for movement, networking, and AI. The included README.pdf indicates all the instructions for linux machines, the original platform for this project. I have since ported it over to Windows, so now it needs to be run with GalactiCombat.exe.
