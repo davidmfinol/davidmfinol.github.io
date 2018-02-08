@@ -15,7 +15,7 @@ My current project! I have spent the past half-year developing an extensible sys
 
 [Source](https://github.com/davidmfinol/Crucible) 
 
-Crucible is my first large-scale project. Originally titled "The Runners", this passion project turned out to be a bit of a crucible for myself and the co-lead. We spent over a year in active development on this project, even taking it into the Longhorn Startup program. As a mobile game, we developed a unique control system that allowed for stealth platforming using a combination of swiping on the screen. The AI for this game turned out to be the largest hurdle, as the core gameplay hinged on having enemy robots that were able to effectively traverse through 2D platforming in order to hunt down the player-character.
+Crucible is my first unreleased large-scale project. Originally titled "The Runners", this passion project turned out to be a bit of a crucible for myself and the co-lead. We spent over a year in active development on this project, even taking it into the Longhorn Startup program. As a mobile game, we developed a unique control system that allowed for stealth platforming using a combination of swiping on the screen. The AI for this game turned out to be the largest hurdle, as the core gameplay hinged on having enemy robots that were able to effectively traverse through 2D platforming in order to hunt down the player-character.
 
 ## Homebody
 ![Homebody](https://github.com/davidmfinol/GGJ18/blob/master/Assets/Textures/ui_titleCard7.png?raw=true) 
@@ -42,7 +42,7 @@ This tale of space vikings comes from the final capstone course of the UT Game D
 
 [Source](https://github.com/davidmfinol/GalactiCombat)
 
-The first game project I worked on as part of the UT Game Development program. As part of a team of 3 programmers, I wrote all the code for movement, networking, and AI. The included README.pdf indicates all the instructions for linux machines, the original platform for this project. I have since ported it over to Windows, so now it needs to be run with GalactiCombat.exe.
+The first game project I worked on as part of the UT Game Development program. As part of a team of 3 programmers, I wrote all the code for movement, networking, and AI. The included README.pdf indicates all the instructions for linux machines, the original platform for this project. I have since ported it over to Windows, so now it needs to be run with GalactiCombat.exe. Unfortunately, GalactiCombatServer.exe has proven difficult to port over correctly, so multiplayer is nonfunctional.
 
 ## LIBnation
 ![LIBnation](https://raw.githubusercontent.com/davidmfinol/LIBnationGame/master/LIBnationGame.png)
