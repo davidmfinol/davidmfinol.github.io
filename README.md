@@ -19,6 +19,8 @@ Crucible is my first unreleased large-scale project. Originally titled "The Runn
 ## Homebody
 ![Homebody](https://github.com/davidmfinol/GGJ18/blob/master/Assets/Textures/ui_titleCard7.png?raw=true) 
 
+[YouTube Gameplay](https://youtu.be/sLGs-B7t3JI)
+
 [Windowsx64 Executable ZIP](https://drive.google.com/uc?id=1ovrBIIe4bbCacYsrXTuk-tT-zBBLv2a3&export=download) 
 
 [Source](https://github.com/davidmfinol/GGJ18) 
