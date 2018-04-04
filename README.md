@@ -30,6 +30,8 @@ As one of the two programmers on this two day Global Game Jam project, I coded h
 ## Romskip Saga
 ![Romksip Saga](https://raw.githubusercontent.com/davidmfinol/Spikings-A_Tale_Of_Space_Vikings/master/Assets/UI/Romskip%20Logo.jpg) 
 
+[YouTube Gameplay](https://youtu.be/j6InP6j7MmY)
+
 [Windowsx64 Executable ZIP](https://drive.google.com/uc?id=12o87ILuhbaI6FuFteKO1Jt7vH8ZgbcnM&export=download)
 
 [Source](https://github.com/davidmfinol/Spikings-A_Tale_Of_Space_Vikings)
