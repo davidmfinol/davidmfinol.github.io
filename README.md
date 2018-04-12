@@ -1,11 +1,11 @@
 # Game Projects
 
 ## Card Game Simulator
-![CGS](https://cardgamesim.finoldigital.com/screenshots/CGS%20Logo.png)
+![CGS](https://www.cardgamesimulator.com/screenshots/CGS%20Logo.png)
 
-[Website](https://cardgamesim.finoldigital.com)
+[Website](https://www.cardgamesimulator.com)
 
-My current project! As owner of Finol Digital LLC, I have created an extensible system of categorizing cards and playing them in a virtual space. CGS is available on Android/iOS. Please check out [https://cardgamesim.finoldigital.com](https://cardgamesim.finoldigital.com)!
+My current project! As owner of Finol Digital LLC, I have created an extensible system of categorizing cards and playing them in a virtual space. CGS is available on Android/iOS. Please check out [https://www.cardgamesimulator.com](https://www.cardgamesimulator.com)!
 
 ## Crucible
 ![Crucible](Crucible.jpg)
