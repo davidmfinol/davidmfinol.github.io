@@ -1,7 +1,7 @@
 # Game Projects
 
 ## Card Game Simulator
-![CGS](https://www.cardgamesimulator.com/screenshots/CGS%20Logo.png)
+![CGS](https://www.cardgamesimulator.com/screenshots/CGSLogo.png)
 
 [Website](https://www.cardgamesimulator.com)
 
