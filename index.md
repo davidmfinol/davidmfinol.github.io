@@ -1,6 +1,6 @@
 ---
 cgsYoutubeId: putYourIDHere
-crucibleYoutubeId: 4rTT_eflPGs
+runnersYoutubeId: 4rTT_eflPGs
 homebodyYoutubeId: sLGs-B7t3JI
 vikingsYoutubeId: j6InP6j7MmY
 ---
@@ -17,7 +17,7 @@ My current project! As owner of Finol Digital LLC, I have created an extensible 
 ## Crucible
 ![Crucible](Crucible.jpg)
 
-{% include youtubePlayer.html id=page.crucibleYoutubeId %}
+{% include youtubePlayer.html id=page.runnersYoutubeId %}
 
 [Source](https://github.com/davidmfinol/Crucible) 
 
