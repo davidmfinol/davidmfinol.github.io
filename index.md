@@ -24,7 +24,6 @@ My current project! As owner of Finol Digital LLC, I have created an extensible 
 Crucible is my first unreleased large-scale project. Originally titled "The Runners", this passion project turned out to be a bit of a crucible for myself and the co-lead. We spent over a year in active development on this project, even taking it into the Longhorn Startup program. As a mobile game, we developed a unique control system that allowed for stealth platforming using a combination of swiping on the screen. The AI for this game turned out to be the largest hurdle, as the core gameplay hinged on having enemy robots that were able to effectively traverse through 2D platforming in order to hunt down the player-character.
 
 ## Homebody
-![Homebody](https://github.com/davidmfinol/GGJ18/blob/master/Assets/Textures/ui_titleCard7.png?raw=true) 
 
 {% include youtubePlayer.html id=page.homebodyYoutubeId %}
 
@@ -35,7 +34,6 @@ Crucible is my first unreleased large-scale project. Originally titled "The Runn
 As one of the two programmers on this two day Global Game Jam project, I coded how the sound projectile moved and interacted with obstacles in game. I also handled the basic animations of the moving characters, and worked with the artists to ensure the level was laid out how they envisioned.
 
 ## Romskip Saga
-![Romksip Saga](https://raw.githubusercontent.com/davidmfinol/Spikings-A_Tale_Of_Space_Vikings/master/Assets/UI/Romskip%20Logo.jpg) 
 
 {% include youtubePlayer.html id=page.vikingsYoutubeId %}
 
