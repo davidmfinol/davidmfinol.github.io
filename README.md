@@ -1,3 +1,10 @@
+---
+cgsYoutubeId: putYourIDHere
+crucibleYoutubeId: 4rTT_eflPGs
+homebodyYoutubeId: sLGs-B7t3JI
+vikingsYoutubeId: j6InP6j7MmY
+---
+
 # Game Projects
 
 ## Card Game Simulator
@@ -10,7 +17,7 @@ My current project! As owner of Finol Digital LLC, I have created an extensible 
 ## Crucible
 ![Crucible](Crucible.jpg)
 
-[YouTube Trailer](https://youtu.be/4rTT_eflPGs)
+{% include youtubePlayer.html id=page.crucibleYoutubeId %}
 
 [Source](https://github.com/davidmfinol/Crucible) 
 
@@ -19,7 +26,7 @@ Crucible is my first unreleased large-scale project. Originally titled "The Runn
 ## Homebody
 ![Homebody](https://github.com/davidmfinol/GGJ18/blob/master/Assets/Textures/ui_titleCard7.png?raw=true) 
 
-[YouTube Gameplay](https://youtu.be/sLGs-B7t3JI)
+{% include youtubePlayer.html id=page.homebodyYoutubeId %}
 
 [Windowsx64 Executable ZIP](https://drive.google.com/uc?id=1ovrBIIe4bbCacYsrXTuk-tT-zBBLv2a3&export=download) 
 
@@ -30,7 +37,7 @@ As one of the two programmers on this two day Global Game Jam project, I coded h
 ## Romskip Saga
 ![Romksip Saga](https://raw.githubusercontent.com/davidmfinol/Spikings-A_Tale_Of_Space_Vikings/master/Assets/UI/Romskip%20Logo.jpg) 
 
-[YouTube Gameplay](https://youtu.be/j6InP6j7MmY)
+{% include youtubePlayer.html id=page.vikingsYoutubeId %}
 
 [Windowsx64 Executable ZIP](https://drive.google.com/uc?id=12o87ILuhbaI6FuFteKO1Jt7vH8ZgbcnM&export=download)
 
