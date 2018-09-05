@@ -1,5 +1,5 @@
 ---
-cgsYoutubeId: putYourIDHere
+cgsYoutubeId: pFaHJ2QTYuo
 runnersYoutubeId: 4rTT_eflPGs
 homebodyYoutubeId: sLGs-B7t3JI
 vikingsYoutubeId: j6InP6j7MmY
@@ -9,6 +9,8 @@ vikingsYoutubeId: j6InP6j7MmY
 
 ## Card Game Simulator
 ![CGS](https://www.cardgamesimulator.com/assets/img/CGSLogo.png)
+
+{% include youtubePlayer.html id=page.cgsYoutubeId %}
 
 [Website](https://www.cardgamesimulator.com)
 
