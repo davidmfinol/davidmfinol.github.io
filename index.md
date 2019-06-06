@@ -31,7 +31,7 @@ Crucible is my first unreleased large-scale project. Originally titled "The Runn
 
 {% include youtubePlayer.html id=page.floodflowYoutubeId %}
 
-[Website](https://nlcsc.itch.io/floodflow)
+[itch.io](https://nlcsc.itch.io/floodflow)
 
 At the [Hoft Game Development Lab](https://www.gamedevelopmentlab.com/), I worked with fellow students to create FloodFlow. I was the only programmer on this project, so we made good use of Unreal Blueprints and their asset store. The challenge with this game was getting fun and realistic water movement mechanics, while keeping performance up.
 
@@ -46,7 +46,7 @@ As one of the two programmers on this two day Global Game Jam project, I coded h
 ## Stop That Train!
 ![StopThatTrain](https://img.itch.zone/aW1nLzE2Nzc1OTkucG5n/347x500/GN6%2Fty.png)
 
-[Website](https://davidmfinol.itch.io/stop-that-train)
+[itch.io](https://davidmfinol.itch.io/stop-that-train)
 
 As one of the two programmers on this two day VR Austin Game Jam, I focused on the debris pick-up mechanics. Microsoft's MixedRealityToolkit/HoloToolkit documentation was a bit difficult to go through, so I think I would go with SteamVR in future VR projects.
 
@@ -66,13 +66,4 @@ As one of the two programmers on this two day Global Game Jam project, I coded h
 
 [Source](https://github.com/davidmfinol/Spikings-A_Tale_Of_Space_Vikings)
 
-This tale of space vikings comes from the final capstone course of the UT Game Development program. In this project, I worked with the artists and other programmers to layout the 2D assets in-game, with appropriate mechanics. In particular, I developed all the AI for the enemies in the game. I also played a large role in defining the actions the player character could take, such as climbing over platforms, and jumping off cliffs.
-
-## GalactiCombat
-![GalactiCombat](GalactiCombat.png)
-
-[Windowsx86 Executable ZIP](https://drive.google.com/uc?id=1uWb3uhPq_-aKXi-P1tcbjS8I0dOGiUTU&export=download)
-
-[Source](https://github.com/davidmfinol/GalactiCombat)
-
-The first game project I worked on as part of the UT Game Development program. As part of a team of 3 programmers, I wrote all the code for movement, networking, and AI. The included README.pdf indicates all the instructions for linux machines, the original platform for this project. I have since ported it over to Windows, so now it needs to be run with GalactiCombat.exe. Unfortunately, GalactiCombatServer.exe has proven difficult to port over correctly, so multiplayer is nonfunctional.\
+This tale of space vikings comes from the final capstone course of the [UT Game Development Program](https://gamedev.utexas.edu/). In this project, I worked with the artists and other programmers to layout the 2D assets in-game, with appropriate mechanics. In particular, I developed all the AI for the enemies in the game. I also played a large role in defining the actions the player character could take, such as climbing over platforms, and jumping off cliffs.
