@@ -10,7 +10,6 @@ vikingsYoutubeId: j6InP6j7MmY
 # Game Projects
 
 ## Card Game Simulator
-![CGS](https://www.cardgamesimulator.com/assets/img/CGSLogo.png)
 
 {% include youtubePlayer.html id=page.cgsYoutubeId %}
 
@@ -19,7 +18,6 @@ vikingsYoutubeId: j6InP6j7MmY
 My current project! As owner of Finol Digital LLC, I have created an extensible system of categorizing cards and playing them in a virtual space. CGS is available on Android/iOS. Please check out [https://www.cardgamesimulator.com](https://www.cardgamesimulator.com)!
 
 ## Crucible
-![Crucible](Crucible.jpg)
 
 {% include youtubePlayer.html id=page.runnersYoutubeId %}
 
@@ -44,6 +42,7 @@ At the [Hoft Game Development Lab](https://www.gamedevelopmentlab.com/), I worke
 As one of the two programmers on this two day Global Game Jam project, I coded how the player moved and interacted with obstacles in game. I also handled the basic animations of the moving characters, and worked with the artists to ensure the level was laid out how they envisioned.
 
 ## Stop That Train!
+
 ![StopThatTrain](https://img.itch.zone/aW1nLzE2Nzc1OTkucG5n/347x500/GN6%2Fty.png)
 
 [itch.io](https://davidmfinol.itch.io/stop-that-train)
