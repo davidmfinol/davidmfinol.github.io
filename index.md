@@ -1,8 +1,9 @@
 ---
 cgsYoutubeId: pFaHJ2QTYuo
+runnersYoutubeId: 4rTT_eflPGs
 floodflowYoutubeId: icV3qGtnbf8
 heartlightYoutubeId: t6Io7pimv1I
-runnersYoutubeId: 4rTT_eflPGs
+trainYoutubeId: KR587XrTb6w
 homebodyYoutubeId: sLGs-B7t3JI
 vikingsYoutubeId: j6InP6j7MmY
 ---
@@ -43,7 +44,7 @@ As one of the two programmers on this two day Global Game Jam project, I coded h
 
 ## Stop That Train!
 
-![StopThatTrain](https://img.itch.zone/aW1nLzE2Nzc1OTkucG5n/347x500/GN6%2Fty.png)
+{% include youtubePlayer.html id=page.trainYoutubeId %}
 
 [itch.io](https://davidmfinol.itch.io/stop-that-train)
 
