@@ -8,7 +8,7 @@ homebodyYoutubeId: sLGs-B7t3JI
 vikingsYoutubeId: j6InP6j7MmY
 ---
 
-# Non-Professional Projects
+# Projects
 
 ## Card Game Simulator
 
