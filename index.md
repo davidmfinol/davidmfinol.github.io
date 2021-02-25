@@ -8,7 +8,7 @@ homebodyYoutubeId: sLGs-B7t3JI
 vikingsYoutubeId: j6InP6j7MmY
 ---
 
-# Game Projects
+# Non-Professional Projects
 
 ## Card Game Simulator
 
@@ -17,6 +17,12 @@ vikingsYoutubeId: j6InP6j7MmY
 [Website](https://www.cardgamesimulator.com)
 
 My current project! As owner of Finol Digital LLC, I have created an extensible system of categorizing cards and playing them in a virtual space. CGS is available on Android/iOS. Please check out [https://www.cardgamesimulator.com](https://www.cardgamesimulator.com)!
+
+## GameCI
+
+![GameCI](assets/game-ci-brand-logo-wordmark.svg)
+
+Continuous Integration for games! CI for Unity hasn't been as easy as I would like, so I've been contributing and am a maintainer for the [GameCI project](https://game.ci/). I also wrote a [blog about it](https://medium.com/@davidmfinol/ci-cd-with-unity-github-actions-and-fastlane-e7aaa337784).
 
 ## Crucible
 
