@@ -1,4 +1,4 @@
-# David Finol's Personal Website
+# Welcome to David Finol's Personal Website!
 
 Welcome to my website!
 
