@@ -17,6 +17,4 @@ minima:
     linkedin: davidmfinol
 header_pages:
   - portfolio.md
-resume_url: https://registry.jsonresume.org/davidmfinol
-linkedin_url: https://www.linkedin.com/in/davidmfinol
-url: 'https://davidmfinol.me'
+url: 'https://davidmfinol.website'
