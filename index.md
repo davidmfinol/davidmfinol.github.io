@@ -16,11 +16,11 @@ vikingsYoutubeId: j6InP6j7MmY
 
 [Website](https://www.cardgamesimulator.com)
 
-My current project! As owner of Finol Digital LLC, I have created an extensible system of categorizing cards and playing them in a virtual space. CGS is available on Android/iOS. Please check out [https://www.cardgamesimulator.com](https://www.cardgamesimulator.com)!
+My current project! As owner of Finol Digital LLC, I have created an extensible system of categorizing cards and playing them in a virtual space. CGS is available on all mobile and desktop platforms! Please check out [https://www.cardgamesimulator.com](https://www.cardgamesimulator.com)!
 
 ## GameCI
 
-![GameCI](assets/game-ci-brand-logo-wordmark.svg)
+![GameCI](assets/img/game-ci-brand-logo-wordmark.svg)
 
 [Website](https://game.ci/)
 
@@ -32,7 +32,7 @@ Continuous Integration for games! CI for Unity hasn't been as easy as I would li
 
 [Source](https://github.com/davidmfinol/Crucible) 
 
-Crucible is my first unreleased large-scale project. Originally titled "The Runners", this passion project turned out to be a bit of a crucible for myself and the co-lead. We spent over a year in active development on this project, even taking it into the Longhorn Startup program. As a mobile game, we developed a unique control system that allowed for stealth platforming using a combination of swiping on the screen. The AI for this game turned out to be the largest hurdle, as the core gameplay hinged on having enemy robots that were able to effectively traverse through 2D platforming in order to hunt down the player-character.
+Crucible is my first unreleased large-scale project. Originally titled "The Runners", this passion project turned out to be a bit of a crucible for myself and the co-lead. As a mobile game, we developed a unique control system that allowed for stealth platforming using a combination of swiping on the screen. The AI for this game turned out to be the largest hurdle, as the core gameplay hinged on having enemy robots that were able to effectively traverse through 2D platforming in order to hunt down the player-character.
 
 ## FloodFlow
 

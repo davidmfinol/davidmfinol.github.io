@@ -1,8 +1,20 @@
-plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
-theme: jekyll-theme-tactile
+theme: minima
 title: David Finol
+tagline: Striving to create software that delights
+description: David Finol's Personal Website
+author: davidmfinol
+social:
+  links:
+    - https://twitter.com/davidmfinol
+    - https://github.com/davidmfinol
+    - https://www.facebook.com/davidmfinol
+    - https://www.linkedin.com/in/davidmfinol
+minima:
+  social_links:
+    twitter: davidmfinol
+    github: davidmfinol
+    facebook: davidmfinol
+    linkedin: davidmfinol
 resume_url: https://registry.jsonresume.org/davidmfinol
 linkedin_url: https://www.linkedin.com/in/davidmfinol
 url: 'https://davidmfinol.me'
