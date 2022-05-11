@@ -6,8 +6,8 @@ Instead, I write this series of articles with the goal of helping Game Developer
 In particular, I belive that Unity game projects don't have as many resources for CI/CD as they should.
 Hopefully, this guide to how I built the CI/CD pipeline for my Unity project will help you with yours.
 
-## The Pipeline
-So this is what the visualization graph for my workflow looks like:
-![Test, Build, and Deploy with CGS](assets/img/cgs-workflow.png)
+## My Workflow
+A picture is worth a thousand words, so take a look at the visualization graph for my GitHub Actions workflow:
+![Test, Build, and Deploy with GameCI](assets/img/cgs-workflow.png)
 
-My workflow is 
+Nowadays, there are a lot of options 
