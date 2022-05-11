@@ -9,6 +9,6 @@ Hopefully, this guide to how I built the CI/CD pipeline for my Unity project wil
 
 ## The Pipeline
 So this is what the visualization graph for my workflow looks like:
-![Test, Build, and Deploy with CGS](assets/img/workflow.png)
+![Test, Build, and Deploy with CGS](assets/img/cgs-workflow.png)
 
 My workflow is 
