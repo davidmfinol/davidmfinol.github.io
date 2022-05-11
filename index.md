@@ -4,7 +4,7 @@ Since you're here, you may be interested in my [portfolio](portfolio.html), or m
 
 ## Card Game Simulator
 
-Please see [the Card Game Simulator website](https://wwww.cardgamesimulator.com/).
+Please see [the Card Game Simulator website](https://www.cardgamesimulator.com/).
 
 ## GameCI
 

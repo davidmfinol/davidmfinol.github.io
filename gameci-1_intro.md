@@ -8,3 +8,7 @@ In particular, I belive that Unity game projects don't have as many resources fo
 Hopefully, this guide to how I built the CI/CD pipeline for my Unity project will help you with yours.
 
 ## The Pipeline
+So this is what the visualization graph for my workflow looks like:
+![Test, Build, and Deploy with CGS](assets/img/workflow.png)
+
+My workflow is 
