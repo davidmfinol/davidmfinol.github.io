@@ -1,5 +1,3 @@
-# GameCI 1: Intro
-
 ## An Introduction
 As a software engineer, I believe every modern software project should have a CI/CD pipeline.
 The reasons for such are many and better explained all over the internet, so I won't be making a case for why you should be using CI/CD.
