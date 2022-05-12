@@ -112,4 +112,4 @@ See [GameCI 2: Testing](gameci-2_testing.html).
 ### Announce Release to Social Media
 
 ## Continue
-If you have decided that you would not like to read about all the jobs in order, I'd recommend continuing with [GameCI 2: Testing](gameci-2_testing.html)
+If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 2: Testing](gameci-2_testing.html)
