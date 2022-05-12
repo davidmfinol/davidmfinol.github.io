@@ -84,7 +84,7 @@ Building and deploying these artifacts is split across multiple jobs, so it woul
 Going into detail on each job would make this article far too long.
 Furthermore, a reader who only wants to publish Android builds on Google Play would be interested in a different set of jobs than a reader who wants to publish PC games on Steam.
 Therefore, here is a quick overview of each job, with links to more info, if more info is desired.
-You may read these overviews and then pick and choose to read only that which is relevant to you.
+You may read these descriptions and then pick and choose to read only that which is relevant to you.
 
 ### Test Code Quality
 I consider this job to be the most fundamental in any CI pipeline, as it is the one responsible for actually running your [unit tests](https://docs.unity3d.com/Manual/testing-editortestsrunner.html).
