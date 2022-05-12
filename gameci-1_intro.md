@@ -45,7 +45,6 @@ on:
     types:
       - opened
     branches:
-      - develop
       - main
     paths:
       - 'Assets/**'
@@ -62,3 +61,55 @@ on:
         default: ''
 jobs:
 ```
+
+## Trigger On
+As you can see in the above code, there are 4 triggers on: `push` to develop, `pull_request` to main, `release` published (with GitHub Release), and `workflow_dispatch`.
+
+The `push` and `pull_request` triggers should run checks to validate each commit, along with a final validation before merging changes to `main`.
+Runs on `push` and `pull_request` should only trigger if a file has changed in the actual Unity project, ie in `Assets/`, `Packages/`, or `ProjectSettings/`.
+Any changes outside of these folders would not cause our Unity project to change, so they can be ignored.
+For example, if we modify the README.md for our project, we wouldn't want the workflow to run, since it wouldn't actually be testing any relevant change to the Unity project.
+
+Runs on `release` will trigger whenever a release is created in the GitHub UI, and we can use `if: github.event.action == 'published'` to detect this scenario.
+
+The triggers for `workflow_dispatch` are the most interesting, since that's where we have setup the most control over the workflow.
+For example, if we wanted to create 2 Windows .exe's to download and run, we can simply pass `StandaloneWindows StandaloneWindows64` as the input.
+This would create both 32-bit and 64-bit Windows executables and upload them to GitHub, where they could then be downloaded for testing.
+
+Taking it a step further, we could input `release Steam` to run the entire production deployment pipeline for Steam.
+My Steam depots involve 4 artifacts: 1) Windows 32-bit, 2) Windows 64-bit, 3) Linux, and 4) Mac.
+Building and deploying these artifacts is split across multiple jobs, so it would now be good to get a high-level overview of all the jobs.
+
+## The Jobs
+Going into detail on each job would make this article far too long.
+Furthermore, a reader who only wants to publish Android builds on Google Play would be interested in a different set of jobs than a reader who wants to publish PC games on Steam.
+Therefore, here is a quick overview of each job, with links to more info, if more info is desired.
+You may read these overviews and then pick and choose to read only that which is relevant to you.
+
+### Test Code Quality
+I consider this job to be the most fundamental in any CI pipeline, as it is the one responsible for actually running your [unit tests](https://docs.unity3d.com/Manual/testing-editortestsrunner.html).
+Furthermore, I also set up SonarQube quality checks and code coverage.
+See [GameCI 2: Testing](gameci-2_testing.html).
+
+### Build with Linux
+
+### Build with Mac
+
+### Deploy to the App Store
+
+### Deploy to the Google Play Store
+
+### Deploy to the Web via GitHub Pages
+
+### Deploy to the Mac App Store
+
+### Build with Windows
+
+### Deploy to the Microsoft Store
+
+### Deploy to the Steam Marketplace
+
+### Announce Release to Social Media
+
+## Continue
+If you have decided that you would not like to read about all the jobs in order, I'd recommend continuing with [GameCI 2: Testing](gameci-2_testing.html)
