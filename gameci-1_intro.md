@@ -88,28 +88,48 @@ You may read these overviews and then pick and choose to read only that which is
 
 ### Test Code Quality
 I consider this job to be the most fundamental in any CI pipeline, as it is the one responsible for actually running your [unit tests](https://docs.unity3d.com/Manual/testing-editortestsrunner.html).
-Furthermore, I also set up SonarQube quality checks and code coverage.
+I also set up SonarQube quality checks and code coverage.
 See [GameCI 2: Testing](gameci-2_testing.html).
 
 ### Build with Linux
+Builds the Android, iOS, StandaloneLinux64, and WebGL artifacts.
+See [GameCI 3: Build with Linux](gameci-3_linuxbuild.html).
 
 ### Build with Mac
+Builds the StandaloneOSX artifact and signs it to generate `Card Game Simulator.app`.
+See [GameCI 5: Build and Deploy with Mac](gameci-5_mac.html).
 
 ### Deploy to the App Store
+Takes the iOS artifact and uses fastlane to build and deploy to the App Store.
+See [GameCI 5: Build and Deploy with Mac](gameci-5_mac.html).
 
 ### Deploy to the Google Play Store
+Takes the Android artifact and uses fastlane to deploy it to the Google Play Store.
+See [GameCI 4: Deploy with Linux](gameci-4_linuxdeploy.html).
 
 ### Deploy to the Web via GitHub Pages
+Takes the WebGL artifact and deploys it via GitHub Pages.
+See [GameCI 4: Deploy with Linux](gameci-4_linuxdeploy.html).
 
 ### Deploy to the Mac App Store
+Takes the StandaloneOSX artifact and uses fastlane to deploy it to the Mac App Store.
+See [GameCI 5: Build and Deploy with Mac](gameci-5_mac.html).
 
 ### Build with Windows
+Builds the StandaloneWindows and StandaloneWindows64 artifacts.
+See [GameCI 6: Build and Deploy with Windows](gameci-6_windows.html).
 
 ### Deploy to the Microsoft Store
+Builds the WSAPlayer artifact and uses Microsoft's tools to build and deploy to the Microsoft Store.
+See [GameCI 6: Build and Deploy with Windows](gameci-6_windows.html).
 
 ### Deploy to the Steam Marketplace
+Takes the StandaloneWindows, StandaloneWindows64, StandaloneLinux64, and StandaloneOSX artifacts and deploys them to the Steam Marketplace.
+See [GameCI 7: Conclusion](gameci-7_conclusion.html).
 
 ### Announce Release to Social Media
+Posts to Discord and Twitter about the successful production deployment.
+See [GameCI 7: Conclusion](gameci-7_conclusion.html).
 
 ## Continue
 If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 2: Testing](gameci-2_testing.html)
