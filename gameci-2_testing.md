@@ -160,7 +160,7 @@ dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
 cd Card-Game-Simulator
 ```
 
-The config for the Sonar scan should be self-explanatory after reviwing the [Sonar docs](https://docs.sonarcloud.io/advanced-setup/analysis-parameters/).
+The config for the Sonar scan should be self-explanatory after reviewing the [Sonar docs](https://docs.sonarcloud.io/advanced-setup/analysis-parameters/).
 After your first successful Sonar scan, you'll want to configure your rules and quality gate settings in the [Sonar Cloud console](https://sonarcloud.io/project/settings).
 Once you have everything configured as you like, you can use the `SonarQube Quality Gate Check` step to ensure that your code quality requirements are always met.
 
