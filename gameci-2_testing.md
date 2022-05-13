@@ -165,11 +165,11 @@ Once you have everything configured as you like, you can use the `SonarQube Qual
 ## Release Management
 The final part of this first job involves some book-keeping surrounding GitHub Releases.
 As mentioned in Part 1, we use `if: github.event.action == 'published'` to detect when a Release has been created through the GitHub UI.
-This release will include the Release Notes, and we want to capture these release notes for subsequent jobs and runs.
+This release will include the Release Notes, and we want to capture these release notes for subsequent runs.
 We can simply commit the release notes to the git repo with the `Update Release Notes` and `Auto-Commit Release Notes` steps.
 GitHub Actions has safeguards in place to ensure that a workflow does not retrigger itself, so we don't have to worry about potentially causing an infinite loop of workflow runs.
 
 ## Continue
 With that, we have put in unit tests, quality checks, and release management.
 We're now ready to move on to actually building and deploying our game.
-If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 3: Build with Linux](gameci-3_linuxbuild.html)
+If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 3: Build with Linux](gameci-3_linuxbuild.html).

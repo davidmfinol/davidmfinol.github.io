@@ -132,4 +132,4 @@ Posts to Discord and Twitter about the successful production deployment.
 See [GameCI 7: Conclusion](gameci-7_conclusion.html).
 
 ## Continue
-If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 2: Testing](gameci-2_testing.html)
+If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 2: Testing](gameci-2_testing.html).
