@@ -1,10 +1,11 @@
 # GameCI 3: Build with Linux
 
 Continuing from [GameCI 2](gameci-2_testing.html), let's examine the `Build with Linux` job matrix.
+We would ideally run all builds on Linux, but there are some constraints that mean we are only able to run a subset of our target builds on Linux.
+Those target platforms are `Android`, `iOS`, `StandaloneLinux64`, and `WebGL`.
+[The GameCI documentation website](https://game.ci/docs/github) is the best resource for learning how to build with GameCI, so I would recommend starting there before we examine my workflow's code below.
 
 ## The Code
-We would ideally run all builds on Linux, but there are some constraints that mean we are only able to run a subset of our target builds on Linux.
-Those targets are `Android`, `iOS`, `StandaloneLinux64`, and `WebGL`:
 ```yml
   buildWithLinux:
     name: Build for ${{ matrix.targetPlatform }}
@@ -81,16 +82,26 @@ Those targets are `Android`, `iOS`, `StandaloneLinux64`, and `WebGL`:
           file: build/cgs-${{ matrix.targetPlatform }}.zip
           tag: ${{ github.ref }}
           overwrite: true
-          body:  ${{ github.event.release.body }}
+          body: ${{ github.event.release.body }}
 ```
+
+Most of this job matrix should be self-explanatory after reading [the GameCI docs](https://game.ci/docs/github/builder), but I'll provide some additional notes for each target platform below.
 
 ## Android
 
+***TODO***
+
 ## iOS
+
+***TODO***
 
 ## StandaloneLinux64
 
+***TODO***
+
 ## WebGL
+
+***TODO***
 
 ## Continue
 If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 4: Deploy with Linux](gameci-4_linuxdeploy.html).
