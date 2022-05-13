@@ -3,7 +3,8 @@
 Continuing from [GameCI 3](gameci-3_linuxbuild.html), let's examine the `Deploy to the Google Play Store` and `Deploy to the Web via GitHub Pages` jobs.
 
 ## Deploy to the Google Play Store
-```yml
+{% highlight yml %}
+{% raw %}
   deployToGooglePlay:
     name: Deploy to the Google Play Store
     runs-on: ubuntu-latest
@@ -40,14 +41,16 @@ Continuing from [GameCI 3](gameci-3_linuxbuild.html), let's examine the `Deploy 
         uses: maierj/fastlane-action@v2.2.1
         with:
           lane: 'android playprod'
-```
+{% endraw %}
+{% endhighlight %}
 
 This job only runs when triggered by either a GitHub Release or a workflow dispatch with `release Android` as the input.
 Note that we use `fastlane/metadata/android/en-US/changelogs/default.txt` to publish the release notes.
 For more details, refer to [the GameCI Android deployment docs](https://game.ci/docs/github/deployment/android).
 
 ## Deploy to the Web via GitHub Pages
-```yml
+{% highlight yml %}
+{% raw %}
   deployToGitHubPages:
     name: Deploy to the Web via GitHub Pages
     runs-on: ubuntu-latest
@@ -72,7 +75,8 @@ For more details, refer to [the GameCI Android deployment docs](https://game.ci/
           branch: main
           file_pattern: docs/**
           commit_message: Deploy to GitHub Pages
-```
+{% endraw %}
+{% endhighlight %}
 
 This job only runs when triggered by either a GitHub Release or a workflow dispatch with `release WebGL` as the input.
 All this jobs does is copy the WebGL artifact to the correct location in the `/docs` folder of [GitHub Pages](https://pages.github.com/).
