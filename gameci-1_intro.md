@@ -28,8 +28,10 @@ When I want to actually deploy to production, I [create a release in GitHub](htt
 I can also [manually run the workflow](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow), with the option to input which jobs should run.
 
 The modularity of my workflow is enabled by setting up different triggers and blocking certain jobs with `if`s.
-You may refer to the [complete workflow on GitHub](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/.github/workflows/main.yml), but going forward, I will show the relevant excerpts here.
-For example, here's the basic setup:
+You may refer to the [complete workflow on GitHub](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/.github/workflows/main.yml), but going forward, I will excerpt the relevant code here.
+
+## The Code
+Let's get started with the start of my workflow:
 ```yml
 # .github/workflows/main.yml
 name: Test, Build, and Deploy with GameCI
@@ -63,7 +65,7 @@ jobs:
 ```
 
 ## Trigger On
-As you can see in the above code, there are 4 triggers on: `push` to develop, `pull_request` to main, `release` published (with GitHub Release), and `workflow_dispatch`.
+As you can see, there are 4 triggers on: `push` to develop, `pull_request` to main, `release` published (with GitHub Release), and `workflow_dispatch`.
 
 The `push` and `pull_request` triggers should run checks to validate each commit, along with a final validation before merging changes to `main`.
 Runs on `push` and `pull_request` should only trigger if a file has changed in the actual Unity project, ie in `Assets/`, `Packages/`, or `ProjectSettings/`.
