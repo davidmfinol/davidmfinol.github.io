@@ -81,14 +81,14 @@ My Steam depots involve 4 artifacts: 1) Windows 32-bit, 2) Windows 64-bit, 3) Li
 Building and deploying these artifacts is split across multiple jobs, so it would now be good to get a high-level overview of all the jobs.
 
 ## The Jobs
-Going into detail on each job would make this article far too long.
+Going into detail on each job would make this article too long.
 Furthermore, a reader who only wants to publish Android builds on Google Play would be interested in a different set of jobs than a reader who wants to publish PC games on Steam.
 Therefore, here is a quick overview of each job, with links to more info, if more info is desired.
 You may read these descriptions and then pick and choose to read only that which is relevant to you.
 
 ### Test Code Quality
 I consider this job to be the most fundamental in any CI pipeline, as it is the one responsible for actually running your [unit tests](https://docs.unity3d.com/Manual/testing-editortestsrunner.html).
-I also set up SonarQube quality checks and code coverage.
+I also set up [SonarQube](https://www.sonarqube.org/) quality checks and code coverage.
 See [GameCI 2: Testing](gameci-2_testing.html).
 
 ### Build with Linux
