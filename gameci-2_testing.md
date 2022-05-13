@@ -4,7 +4,8 @@ Continuing from [GameCI 1](gameci-1_intro.html), let's examine the `Test Code Qu
 
 ## The Code
 This is the full `tests` job:
-```yml
+{% highlight yml %}
+{% raw %}
   tests:
     name: Test Code Quality
     runs-on: ubuntu-latest
@@ -93,7 +94,8 @@ This is the full `tests` job:
           branch: main
           file_pattern: fastlane/metadata
           commit_message: Update Release Notes
-```
+{% endraw %}
+{% endhighlight %}
 
 The steps for this job fall into 3 categories:
 1. Unity Test Runner

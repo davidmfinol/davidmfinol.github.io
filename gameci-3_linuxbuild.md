@@ -6,7 +6,8 @@ Those target platforms are `Android`, `iOS`, `StandaloneLinux64`, and `WebGL`.
 [The GameCI documentation website](https://game.ci/docs/github) is the best resource for learning how to build with GameCI, so I would recommend starting there before we examine my workflow's code below.
 
 ## The Code
-```yml
+{% highlight yml %}
+{% raw %}
   buildWithLinux:
     name: Build for ${{ matrix.targetPlatform }}
     runs-on: ubuntu-latest
@@ -83,7 +84,8 @@ Those target platforms are `Android`, `iOS`, `StandaloneLinux64`, and `WebGL`.
           tag: ${{ github.ref }}
           overwrite: true
           body: ${{ github.event.release.body }}
-```
+{% endraw %}
+{% endhighlight %}
 
 Most of this job matrix should be self-explanatory after reading [the GameCI docs](https://game.ci/docs/github/builder), but I'll provide some additional notes for each target platform below.
 
