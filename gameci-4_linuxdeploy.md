@@ -84,4 +84,4 @@ Once copied, simply committing the files will trigger a GitHub Pages deployment.
 As setup, I did create and edit [cgs-WebGL.html](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/docs/cgs-webgl.html), though work remains to make this web page look and feel nicer.
 
 ## Continue
-If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 5: Build and Deploy with Mac](gameci-5_mac.html).
+If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 5: Build and Deploy with MacOS](gameci-5_mac.html).
