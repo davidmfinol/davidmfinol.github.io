@@ -31,7 +31,7 @@ Please check out [https://www.cardgamesimulator.com](https://www.cardgamesimulat
 
 Continuous Integration for games! 
 CI for Unity hasn't been as easy as I would like, so I've been contributing to and am a maintainer for the [GameCI project](https://game.ci/). 
-I also wrote a [blog post about it](https://medium.com/@davidmfinol/ci-cd-with-unity-github-actions-and-fastlane-e7aaa337784).
+I also wrote about it [here](gameci-1_intro.html).
 
 ## Crucible
 
