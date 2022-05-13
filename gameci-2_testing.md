@@ -3,7 +3,7 @@
 Continuing from [GameCI 1](gameci-1_intro.html), let's examine the `Test Code Quality` job.
 
 ## The Code
-This is is the full `tests` job:
+This is the full `tests` job:
 ```yml
   tests:
     name: Test Code Quality
@@ -101,7 +101,7 @@ The steps for this job fall into 3 categories:
 3. Release Management
 
 ## Unity Test Runner
-I'd argue that this first part is the core of any CI pipeline: the unit tests.
+This first part is the core of any CI pipeline: the unit tests.
 The code coverage for my project isn't actually that high, but I do have coverage for the most critical code paths.
 And I'd like to ensure that those critical code paths are always well-tested.
 
