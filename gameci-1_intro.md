@@ -90,7 +90,7 @@ You may read these descriptions and then pick and choose to read only that which
 
 ### Test Code Quality
 I consider this job to be the most fundamental in any CI pipeline, as it is the one responsible for actually running your [unit tests](https://docs.unity3d.com/Manual/testing-editortestsrunner.html).
-I also set up [SonarQube](https://www.sonarqube.org/) quality checks and code coverage.
+I also set up [SonarQube](https://www.sonarqube.org/) quality checks and do some release management.
 See [GameCI 2: Testing](gameci-2_testing.html).
 
 ### Build with Linux
