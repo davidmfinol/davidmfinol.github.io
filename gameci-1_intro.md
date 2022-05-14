@@ -83,7 +83,7 @@ Runs on `release` will trigger whenever a release is created in the GitHub UI, a
 
 The triggers for `workflow_dispatch` are the most interesting, since they are where we have setup the most control over the workflow.
 For example, if we wanted to create 2 Windows .exe's to download and run, we could simply pass `StandaloneWindows StandaloneWindows64` as the input.
-This would create both 32-bit and 64-bit Windows executables and upload them to GitHub, where they could then be downloaded for testing.
+This would create both a 32-bit and a 64-bit Windows executable and upload them to GitHub, where they could be downloaded for testing.
 
 Taking it a step further, we could input `release Steam` to run the entire production deployment pipeline for Steam.
 My Steam depots involve 4 artifacts: 1) Windows 32-bit, 2) Windows 64-bit, 3) Linux, and 4) Mac.
