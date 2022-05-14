@@ -110,14 +110,6 @@ See [GameCI 2: Testing](gameci-2_testing.html).
 Builds the Android, iOS, StandaloneLinux64, and WebGL artifacts.
 See [GameCI 3: Build with Linux](gameci-3_linuxbuild.html).
 
-### Build with Mac
-Builds the StandaloneOSX artifact and signs it to generate `Card Game Simulator.app`.
-See [GameCI 5: Build and Deploy with Mac](gameci-5_mac.html).
-
-### Deploy to the App Store
-Takes the iOS artifact and uses fastlane to build and deploy to the App Store.
-See [GameCI 5: Build and Deploy with Mac](gameci-5_mac.html).
-
 ### Deploy to the Google Play Store
 Takes the Android artifact and uses fastlane to deploy it to the Google Play Store.
 See [GameCI 4: Deploy with Linux](gameci-4_linuxdeploy.html).
@@ -125,6 +117,14 @@ See [GameCI 4: Deploy with Linux](gameci-4_linuxdeploy.html).
 ### Deploy to the Web via GitHub Pages
 Takes the WebGL artifact and deploys it via GitHub Pages.
 See [GameCI 4: Deploy with Linux](gameci-4_linuxdeploy.html).
+
+### Build with Mac
+Builds the StandaloneOSX artifact and signs it to generate `Card Game Simulator.app`.
+See [GameCI 5: Build and Deploy with Mac](gameci-5_mac.html).
+
+### Deploy to the App Store
+Takes the iOS artifact and uses fastlane to build and deploy to the App Store.
+See [GameCI 5: Build and Deploy with Mac](gameci-5_mac.html).
 
 ### Deploy to the Mac App Store
 Takes the StandaloneOSX artifact and uses fastlane to deploy it to the Mac App Store.
