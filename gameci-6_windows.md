@@ -267,12 +267,12 @@ Instead, I considered some other options:
 2. I could split the job into multiple jobs that would run in parallel, and then there would be another job that would combine the results. This would introduce a lot of complexity, so I didn't like this option either.
 3. I could use the C: drive of the GitHub runner, which could possibly have more space than the default drive. This is the option I chose.
 
-Having chosen to use the C: for the process of building the .appxupload file, I start by re-cloning the repo to C:, but this time, it's a shallow clone.
+Having chosen to use C: for the process of building the .appxupload file, I start by re-cloning the repo to C:, but this time, it's a shallow clone.
 Going forward, I have to be careful to use `C:/Card-Game-Simulator.git` instead of the default working directory.
 
 ### Building the .appxupload
 
-Logically, the next step is to build the .appxupload. In the `Deploy to the Microsoft Store` job, I have some steps related to Release Notes first, but I'll explain those steps later.
+Logically, the next step is to take the WSAPlayer artifact and use it to build the .appxupload. In the `Deploy to the Microsoft Store` job, I have some steps related to Release Notes first, but I'll explain those steps later.
 
 So how do you actually build the .appxupload? 
 
