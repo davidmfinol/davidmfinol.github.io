@@ -212,4 +212,3 @@ As setup, I did create and edit [cgs-WebGL.html](https://github.com/finol-digita
 ## Continue
 
 I recommend continuing with [GameCI 4: Build and Deploy with MacOS](gameci-4_mac.html).
-
