@@ -1,6 +1,6 @@
 # GameCI 6: Build and Deploy with Windows
 
-Continuing from [GameCI 5](gameci-5_mac.html), let's examine the `Build with Windows` and `Deploy to the Microsoft Store` jobs.
+Continuing from [GameCI 4](gameci-4_mac.html), let's examine the `Build with Windows` and `Deploy to the Microsoft Store` jobs.
 
 ## Build with Windows
 
@@ -71,7 +71,7 @@ Most of this job should be self-explanatory after reading [the GameCI Builder do
 Instead of using a Linux runner, we need a Windows runner because Windows builds require Windows as a runner if using [IL2CPP as the scripting backend](https://docs.unity3d.com/Manual/IL2CPP.html). 
 I recommend using IL2CPP, for better performance than Mono.
 
-The Windows executables can be deployed via Steam (see [GameCI 7: Conclusion](gameci-7_conclusion.html), but the `Zip Build` and `Upload Zip to GitHub Release` steps also enable players to get the builds from the GitHub Releases page.
+The Windows executables can be deployed via Steam (see [GameCI 6: Conclusion](gameci-6_conclusion.html), but the `Zip Build` and `Upload Zip to GitHub Release` steps also enable players to get the builds from the GitHub Releases page.
 Note that the `Upload Zip to GitHub Release` step requires a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 You might also ask: Why does this job run after the Linux and Mac builds instead of in parallel to those builds?
@@ -320,4 +320,4 @@ If you're a fellow Unity + UWP developer, I hope your journey to an automated de
 
 ## Continue
 
-I recommend concluding with [GameCI 7: Conclusion](gameci-7_conclusion.html).
+I recommend concluding with [GameCI 6: Conclusion](gameci-6_conclusion.html).

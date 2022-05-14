@@ -13,9 +13,9 @@ Hopefully, this guide to how I built the CI/CD pipeline for my Unity project wil
 A picture is worth a thousand words, so take a look at the visualization graph for my workflow:
 [![Test, Build, and Deploy with GameCI](assets/img/cgs-workflow.png)](https://davidmfinol.website/assets/img/cgs-workflow.png)
 
-Nowadays, developers have many CI options. Unity Cloud Build, CircleCI, GitLab CI, and Jenkins are just a few examples.
-I chose [GitHub Actions](https://github.com/features/actions) because it is tightly integrated with the GitHub repository where I already keep my open-source project
- and GitHub provides free CI minutes for open-source projects.
+Nowadays, developers have many CI options.
+Unity Cloud Build, CircleCI, GitLab CI, and Jenkins are just a few examples.
+I chose [GitHub Actions](https://github.com/features/actions) because it is tightly integrated with the GitHub repository where I already keep my open-source project and GitHub provides free CI minutes for open-source projects.
 Plus, it makes this nice visual graph.
 
 ## Pieces of the Workflow
@@ -26,7 +26,8 @@ If you look at the names of the jobs that didn't run, you may be able to guess t
 
 Depending on how you think of it, it could be argued that my workflow is composed of multiple workflows.
 For every push to my develop branch I run the test and build jobs, to confirm that new commits didn't break anything.
-When I want to deploy to production, I [create a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) on GitHub. The release will trigger the workflow to run with the production deployment jobs.
+When I want to deploy to production, I [create a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) on GitHub.
+The release will trigger the workflow to run with the production deployment jobs.
 I can also [manually run the workflow](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow), with the option to input which jobs should run.
 
 The modularity of my workflow is enabled both by different triggers and by blocking certain jobs with conditions.
@@ -96,9 +97,7 @@ Building and deploying these artifacts is split across multiple jobs, so it woul
 
 ## The Jobs
 
-Going into detail on each job would make this article too long.
-Furthermore, people who only want to publish Android builds on Google Play would be interested in a different set of jobs than people who want to publish PC games on Steam.
-Therefore, here is a quick overview of each job, with links to more info, if more info is desired.
+For each job below, I have put a quick description and a link to additional details.
 You may read these descriptions and then pick and choose to read only that which is relevant to you.
 
 ### Test Code Quality
@@ -108,43 +107,43 @@ See [GameCI 2: Testing](gameci-2_testing.html).
 
 ### Build with Linux
 Builds the Android, iOS, StandaloneLinux64, and WebGL artifacts.
-See [GameCI 3: Build with Linux](gameci-3_linuxbuild.html).
+See [GameCI 3: Build and Deploy with Linux](gameci-3_linux.html).
 
 ### Deploy to the Google Play Store
 Takes the Android artifact and uses fastlane to deploy it to the Google Play Store.
-See [GameCI 4: Deploy with Linux](gameci-4_linuxdeploy.html).
+See [GameCI 3: Build and Deploy with Linux](gameci-3_linux.html).
 
 ### Deploy to the Web via GitHub Pages
 Takes the WebGL artifact and deploys it via GitHub Pages.
-See [GameCI 4: Deploy with Linux](gameci-4_linuxdeploy.html).
+See [GameCI 3: Build and Deploy with Linux](gameci-3_linux.html).
 
 ### Build with Mac
 Builds the StandaloneOSX artifact and signs it to generate `Card Game Simulator.app`.
-See [GameCI 5: Build and Deploy with Mac](gameci-5_mac.html).
+See [GameCI 4: Build and Deploy with Mac](gameci-4_mac.html).
 
 ### Deploy to the App Store
 Takes the iOS artifact and uses fastlane to build and deploy to the App Store.
-See [GameCI 5: Build and Deploy with Mac](gameci-5_mac.html).
+See [GameCI 4: Build and Deploy with Mac](gameci-4_mac.html).
 
 ### Deploy to the Mac App Store
 Takes the StandaloneOSX artifact and uses fastlane to deploy it to the Mac App Store.
-See [GameCI 5: Build and Deploy with Mac](gameci-5_mac.html).
+See [GameCI 4: Build and Deploy with Mac](gameci-4_mac.html).
 
 ### Build with Windows
 Builds the StandaloneWindows and StandaloneWindows64 artifacts.
-See [GameCI 6: Build and Deploy with Windows](gameci-6_windows.html).
+See [GameCI 5: Build and Deploy with Windows](gameci-5_windows.html).
 
 ### Deploy to the Microsoft Store
 Builds the WSAPlayer artifact and uses Microsoft's tools to build and deploy to the Microsoft Store.
-See [GameCI 6: Build and Deploy with Windows](gameci-6_windows.html).
+See [GameCI 5: Build and Deploy with Windows](gameci-5_windows.html).
 
 ### Deploy to the Steam Marketplace
 Takes the StandaloneWindows, StandaloneWindows64, StandaloneLinux64, and StandaloneOSX artifacts and deploys them to Steam.
-See [GameCI 7: Conclusion](gameci-7_conclusion.html).
+See [GameCI 6: Conclusion](gameci-6_conclusion.html).
 
 ### Announce Release to Social Media
 Posts to Discord and Twitter about the successful production deployment.
-See [GameCI 7: Conclusion](gameci-7_conclusion.html).
+See [GameCI 6: Conclusion](gameci-6_conclusion.html).
 
 ## Continue
 

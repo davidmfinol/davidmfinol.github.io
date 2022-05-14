@@ -1,6 +1,6 @@
 # GameCI 5: Build and Deploy with MacOS
 
-Continuing from [GameCI 4](gameci-4_linuxdeploy.html), let's examine the `Build with Mac`, `Deploy to the Mac App Store`, and `Deploy to the App Store` jobs.
+Continuing from [GameCI 3](gameci-3_linux.html), let's examine the `Build with Mac`, `Deploy to the Mac App Store`, and `Deploy to the App Store` jobs.
 
 ## Build with Mac
 
@@ -90,7 +90,7 @@ Instead of using a Linux runner, we need a macOS runner for the StandaloneOSX ar
 
 You may want to refer to both [Apple's code-signing documentation](https://developer.apple.com/support/code-signing/) as well as [the script I use for signing mac builds](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/fastlane/sign-mac-build.sh).
 
-The mac app can be deployed both via Steam (see [GameCI 7: Conclusion](gameci-7_conclusion.html)) and via the Mac App Store (see below), but the `Zip App` and `Upload Zip to GitHub Release` steps also enable players to get the build from the GitHub Releases page.
+The mac app can be deployed both via Steam (see [GameCI 6: Conclusion](gameci-6_conclusion.html)) and via the Mac App Store (see below), but the `Zip App` and `Upload Zip to GitHub Release` steps also enable players to get the build from the GitHub Releases page.
 Note that the `Upload Zip to GitHub Release` step requires a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 ## Deploy to the Mac App Store
@@ -186,10 +186,10 @@ Instead of providing additional details, I can only refer you to [the fastlane d
 {% endhighlight %}
 
 This job only runs when triggered by either a GitHub Release or a workflow dispatch with `release iOS` as the input.
-This job takes the iOS Xcode project (which was built in [GameCI 3: Build with Linux](gameci-3_linuxbuild.html)) and uses fastlane to build and deploy to the App Store.
+This job takes the iOS Xcode project (which was built in [GameCI 3: Build and Deploy with Linux](gameci-3_linux.html)) and uses fastlane to build and deploy to the App Store.
 
 For additional details about iOS builds and deployment, refer to [the GameCI iOS docs](https://game.ci/docs/github/deployment/ios).
 
 ## Continue
 
-I recommend continuing with [GameCI 6: Build and Deploy with Windows](gameci-6_windows.html).
+I recommend continuing with [GameCI 5: Build and Deploy with Windows](gameci-5_windows.html).
