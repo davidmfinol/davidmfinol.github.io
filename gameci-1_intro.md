@@ -5,7 +5,7 @@ The reasons for such are many and better explained [all](https://www.synopsys.co
  [over](https://www.redhat.com/en/topics/devops/what-is-ci-cd) [the](https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html)
  [internet](https://en.wikipedia.org/wiki/CI/CD), so I won't be making a case for why you should be using CI/CD.
 Instead, I write this series of articles with the goal of helping Game Developers with their own pipelines.
-In particular, I belive that [Unity](https://unity.com/) game projects don't have as many resources for CI/CD as they should.
+In particular, I believe that [Unity](https://unity.com/) game projects don't have as many resources for CI/CD as they should.
 Hopefully, this guide to how I built the CI/CD pipeline for my Unity project will help you with yours.
 
 ## My Workflow

@@ -84,8 +84,8 @@ Continuing from [GameCI 4](gameci-4_linuxdeploy.html), let's examine the `Build 
 Most of this job should be self-explanatory after reading [the GameCI Builder docs](https://game.ci/docs/github/builder), but here are some additional details:
 
 Instead of using a Linux runner, we need a macOS runner for the StandaloneOSX artifact for a few reasons:
-1. StandaloneOSX builds require macOS if using [IL2CPP as the scripting backend](https://docs.unity3d.com/Manual/IL2CPP.html). I recommend using IL2CPP, as it is significantly more performant than Mono.
-2. I accidently submitted a bad version to the Apple Store, and now I have to use [a hack in fastlane](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/fastlane/Fastfile#L72) to allow my builds to be submitted to the Apple Store. Be careful when submitting to the App Store!
+1. StandaloneOSX builds require macOS if using [IL2CPP as the scripting backend](https://docs.unity3d.com/Manual/IL2CPP.html). I recommend using IL2CPP, for better performance than Mono.
+2. I accidentally submitted a bad version to the Apple Store, and now I have to use [a hack in fastlane](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/fastlane/Fastfile#L72) to allow my builds to be submitted to the Apple Store. Be careful when submitting to the App Store!
 3. In order for players to download and run a macOS executable, that executable must first be signed using the macOS `codesign` tool.
 
 You may want to refer to both [Apple's code-signing documentation](https://developer.apple.com/support/code-signing/) as well as [the script I use for signing mac builds](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/fastlane/sign-mac-build.sh).

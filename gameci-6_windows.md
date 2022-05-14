@@ -69,7 +69,7 @@ Continuing from [GameCI 5](gameci-5_mac.html), let's examine the `Build with Win
 Most of this job should be self-explanatory after reading [the GameCI Builder docs](https://game.ci/docs/github/builder), but here are some additional details:
 
 Instead of using a Linux runner, we need a Windows runner because Windows builds require Windows as a runner if using [IL2CPP as the scripting backend](https://docs.unity3d.com/Manual/IL2CPP.html). 
-I recommend using IL2CPP, as it is significantly more performant than Mono.
+I recommend using IL2CPP, for better performance than Mono.
 
 The Windows executables can be deployed via Steam (see [GameCI 7: Conclusion](gameci-7_conclusion.html), but the `Zip Build` and `Upload Zip to GitHub Release` steps also enable players to get the builds from the GitHub Releases page.
 Note that the `Upload Zip to GitHub Release` step requires a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
@@ -230,7 +230,7 @@ So I'll dump the code here, but I highly recommend you first skip past it and co
 
 Universal Windows Platform (UWP) apps are funny.
 I don't mean "haha"-funny; I mean "huh?"-funny.
-Apps using UWP are MUCH less popular than .exe's, and as such, there's seems to be a dearth of documentation for how to even create and/or work with UWP.
+Apps using UWP are MUCH less popular than .exe's, and as such, there seems to be a dearth of documentation for how to even create and/or work with UWP.
 At one point, it seemed like UWP could have been the future for Windows, as UWP used to be a requirement for getting onto the Windows Store.
 
 That requirement is what motivated me to get my app to build with UWP, but that requirement is no longer true.
@@ -314,7 +314,9 @@ Luckily, I already have the `davidmfinol/replace-action` action to help with thi
 For the `Upload to the Microsoft Store` step itself, refer to the [StoreBroker docs](https://github.com/microsoft/StoreBroker/blob/master/Documentation/SETUP.md).
 
 It wasn't easy, but getting all of the above to succeed has been hugely satisfying for me.
-I hope you've found satisfaction here too!
+I suspect that there are not many other Unity developers that are building UWP apps for the Microsoft Store.
+If you're a fellow Unity + UWP developer, I hope your journey to an automated deployment pipeline is easier than mine was!
+
 
 ## Continue
 

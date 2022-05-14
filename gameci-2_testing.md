@@ -111,7 +111,7 @@ The code coverage for my project isn't actually that high, but I do have coverag
 And I'd like to ensure that those critical code paths are always well-tested.
 
 The [Unity Test Framework](https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/index.html) is the obvious option for Unity unit tests, and as a maintainer for GameCI, I recommend running tests with the [Unity Test Runner action](https://github.com/marketplace/actions/unity-test-runner).
-Please refer to [the GameCI documentation website](https://game.ci/docs/github) as the best resource for how to use Unity test runner.
+Please refer to [the GameCI documentation website](https://game.ci/docs/github) as the best resource for how to use the Unity test runner.
 After you have an understanding of the `Checkout Repository`, `Cache Library`, and `Run Unit Tests` steps, you may want to move on to SonarQube.
 
 ## SonarQube
@@ -174,7 +174,7 @@ The final part of this first job involves some book-keeping surrounding GitHub R
 As mentioned in Part 1, we use `if: github.event.action == 'published'` to detect when a Release has been created through the GitHub UI.
 This release will include the Release Notes, and we want to capture these release notes for subsequent runs.
 We can simply commit the release notes to the git repo with the `Update Release Notes` and `Auto-Commit Release Notes` steps.
-GitHub Actions has safeguards in place to ensure that a workflow does not retrigger itself, so we don't have to worry about potentially causing an infinite loop of workflow runs.
+GitHub Actions has safeguards in place to ensure that a workflow does not re-trigger itself, so we don't have to worry about potentially causing an infinite loop of workflow runs.
 
 ## Continue
 
