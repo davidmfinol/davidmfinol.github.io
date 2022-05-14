@@ -134,7 +134,7 @@ Builds the WSAPlayer artifact and uses Microsoft's tools to build and deploy to 
 See [GameCI 6: Build and Deploy with Windows](gameci-6_windows.html).
 
 ### Deploy to the Steam Marketplace
-Takes the StandaloneWindows, StandaloneWindows64, StandaloneLinux64, and StandaloneOSX artifacts and deploys them to the Steam Marketplace.
+Takes the StandaloneWindows, StandaloneWindows64, StandaloneLinux64, and StandaloneOSX artifacts and deploys them to Steam.
 See [GameCI 7: Conclusion](gameci-7_conclusion.html).
 
 ### Announce Release to Social Media
