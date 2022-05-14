@@ -24,9 +24,9 @@ You may have noticed that there are many different jobs in the workflow, where o
 Later I'll explain all the different jobs and what they do/how they work, but the first thing to examine is why some jobs run while others do not.
 If you look at the names of the jobs that didn't run, you may be able to guess the reason: The jobs that deploy to production (the CD part of CI/CD) were not part of this workflow run.
 
-Depending on how you think of it, it could be argued that my workflow is actually multiple workflows in one.
-For every push to my develop branch, I run the test and build jobs, to confirm that that commit didn't break anything.
-When I want to actually deploy to production, I [create a release in GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release), which will trigger the workflow to run with all the production deployment jobs.
+Depending on how you think of it, it could be argued that my workflow is composed of multiple workflows.
+For every push to my develop branch I run the test and build jobs, to confirm that new commits didn't break anything.
+When I want to deploy to production, I [create a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) on GitHub. The release will trigger the workflow to run with the production deployment jobs.
 I can also [manually run the workflow](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow), with the option to input which jobs should run.
 
 The modularity of my workflow is enabled by setting up different triggers and blocking certain jobs with `if`s.
