@@ -97,8 +97,8 @@ Therefore, here is a quick overview of each job, with links to more info, if mor
 You may read these descriptions and then pick and choose to read only that which is relevant to you.
 
 ### Test Code Quality
-I consider this job to be the most fundamental in any CI pipeline, as it is the one responsible for actually running your [unit tests](https://docs.unity3d.com/Manual/testing-editortestsrunner.html).
-I also set up [SonarQube](https://www.sonarqube.org/) quality checks and do some release management.
+I consider this job to be the most important one, as it is responsible for running my [tests](https://docs.unity3d.com/Manual/testing-editortestsrunner.html).
+I have also set up [SonarQube](https://www.sonarqube.org/) quality checks and do some release management.
 See [GameCI 2: Testing](gameci-2_testing.html).
 
 ### Build with Linux
