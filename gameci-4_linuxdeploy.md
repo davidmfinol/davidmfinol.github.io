@@ -79,7 +79,7 @@ For more details, refer to [the GameCI Android deployment docs](https://game.ci/
 {% endhighlight %}
 
 This job only runs when triggered by either a GitHub Release or a workflow dispatch with `release WebGL` as the input.
-All this jobs does is copy the WebGL artifact to the correct location in the `/docs` folder of [GitHub Pages](https://pages.github.com/).
+All this job does is copy the WebGL artifact to the correct location in the `/docs` folder of [GitHub Pages](https://pages.github.com/).
 Once copied, simply committing the files will trigger a GitHub Pages deployment.
 As setup, I did create and edit [cgs-WebGL.html](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/docs/cgs-webgl.html), though work remains to make this web page look and feel nicer.
 

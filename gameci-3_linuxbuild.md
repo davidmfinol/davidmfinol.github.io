@@ -87,23 +87,39 @@ Those target platforms are `Android`, `iOS`, `StandaloneLinux64`, and `WebGL`.
 {% endraw %}
 {% endhighlight %}
 
-Most of this job matrix should be self-explanatory after reading [the GameCI docs](https://game.ci/docs/github/builder), but I'll provide some additional notes for each target platform below.
+Most of this job matrix should be self-explanatory after reading [the GameCI Builder docs](https://game.ci/docs/github/builder), but I'll provide some additional notes for each target platform below.
 
 ## Android
 
-***TODO***
+A common issue with Android builds on the GitHub runners is running out of disk space.
+The `Free Disk Space for Android` step attempts to free up some space to hopefully prevent this issue, but if you have a larger project, you may need to do further work to avoid this issue:
+```bash
+df -h
+sudo swapoff -a
+sudo rm -f /swapfile
+sudo rm -rf /usr/share/dotnet
+sudo rm -rf /opt/ghc
+sudo rm -rf "/usr/local/share/boost"
+sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+df -h
+```
+
+For additional details about Android builds, refer to [the GameCI Android docs](https://game.ci/docs/github/deployment/android).
 
 ## iOS
 
-***TODO***
+Building for iOS is a 2-stage process: This `Build with Linux` job is the first stage, but the second stage requires a macOS runner.
+This job generates an Xcode project, which is uploaded as an artifact to be used in [GameCI 5: Build and Deploy with MacOS](gameci-5_mac.html).
+
+For additional details about iOS builds, refer to [the GameCI iOS docs](https://game.ci/docs/github/deployment/ios).
 
 ## StandaloneLinux64
 
-***TODO***
+The Linux executable can be deployed through Steam (see [GameCI 7: Conclusion](gameci-7_conclusion.html), but the `Zip Build` and `Upload Zip to GitHub Release` steps also enable players to get the build from the GitHub Releases page.
 
 ## WebGL
 
-***TODO***
+For details on deploying the WebGL build, see [GameCI 4: Deploy with Linux](gameci-4_linuxdeploy.html).
 
 ## Continue
 If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 4: Deploy with Linux](gameci-4_linuxdeploy.html).
