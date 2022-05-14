@@ -14,9 +14,9 @@ A picture is worth a thousand words, so take a look at the visualization graph f
 [![Test, Build, and Deploy with GameCI](assets/img/cgs-workflow.png)](https://davidmfinol.website/assets/img/cgs-workflow.png)
 
 Nowadays, developers have many CI options. Unity Cloud Build, CircleCI, GitLab CI, and Jenkins are just a few examples.
-I chose [GitHub Actions](https://github.com/features/actions) because it is tightly integrated to the GitHub repo where I already keep my open-source project,
- and GitHub provides free CI minutes for open-source projects like mine.
-Plus, it makes this nice visualization graph.
+I chose [GitHub Actions](https://github.com/features/actions) because it is tightly integrated with the GitHub repository where I already keep my open-source project
+ and GitHub provides free CI minutes for open-source projects.
+Plus, it makes this nice visual graph.
 
 ## Pieces of the Workflow
 
