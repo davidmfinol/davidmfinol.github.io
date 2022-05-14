@@ -97,7 +97,7 @@ Building and deploying these artifacts is split across multiple jobs, so it woul
 ## The Jobs
 
 Going into detail on each job would make this article too long.
-Furthermore, a reader who only wants to publish Android builds on Google Play would be interested in a different set of jobs than a reader who wants to publish PC games on Steam.
+Furthermore, people who only want to publish Android builds on Google Play would be interested in a different set of jobs than people who want to publish PC games on Steam.
 Therefore, here is a quick overview of each job, with links to more info, if more info is desired.
 You may read these descriptions and then pick and choose to read only that which is relevant to you.
 
