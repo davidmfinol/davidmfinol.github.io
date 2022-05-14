@@ -226,7 +226,96 @@ So I'll dump the code here, but I highly recommend you first skip past it and co
 {% endraw %}
 {% endhighlight %}
 
-***TODO***
+### Some Context
+
+Universal Windows Platform (UWP) apps are funny.
+I don't mean "haha"-funny; I mean "huh?"-funny.
+Apps using UWP are MUCH less popular than .exe's, and as such, there's seems to be a dearth of documentation for how to even create and/or work with UWP.
+At one point, it seemed like UWP could have been the future for Windows, as UWP used to be a requirement for getting onto the Windows Store.
+
+That requirement is what motivated me to get my app to build with UWP, but that requirement is no longer true.
+Now, I could just submit the .exe's from above to the Microsoft Store, and that would save me some pain.
+But you know what?
+
+I like UWP apps.
+
+I don't necessarily like developing for the UWP platform (we'll get to it), but I do like using the UWP version of my app over the .exe version of my app.
+I like how it's easier to install and to run.
+I like how it automatically handles both full-screen and windowed views.
+And most of all, I like how I can have functional deep links for the UWP version of my app. 
+
+I consider [Deep Linking](https://en.wikipedia.org/wiki/Mobile_deep_linking) to be critical functionality for my app across all platforms, even the non-mobile, desktop platforms.
+The fact that I have working deep links on UWP but not on .exe is enough for me to go through all of the below.
+
+### Start by Building to a Solution
+
+The start of this job is pretty similar to the other jobs we've examined thus far.
+This job only runs when triggered by either a GitHub Release or a workflow dispatch with `release WSAPlayer` as the input.
+This job then uses `game-ci/unity-builder` to generate and then upload the WSAPlayer artifact, which is a Visual Studio Project/Solution.
+
+So far, so good. The next step should simply be to use that Visual Studio Project/Solution to create a .appxupload file and then submit that file to the Microsoft Store.
+
+But it gets complicated.
+
+### Check It Out Again
+
+While developing this job, I ran into `out of disk space` issues.
+If you read part 3, you may remember that the Android builds are likely to run into the same issue.
+You could work around the issue on Android by clearing some disk space, but I couldn't find a way to do the same here.
+Instead, I considered some other options:
+1. I could use a self-hosted runner with more space on it. This would require spending money in addition to time/effort, so I really wanted to keep this option as a last resort.
+2. I could split the job into multiple jobs that would run in parallel, and then there would be another job that would combine the results. This would introduce a lot of complexity, so I didn't like this option either.
+3. I could use the C: drive of the GitHub runner, which could possibly have more space than the default drive. This is the option I chose.
+
+Having chosen to use the C: for the process of building the .appxupload file, I start by re-cloning the repo to C:, but this time, it's a shallow clone.
+Going forward, I have to be careful to use `C:/Card-Game-Simulator.git` instead of the default working directory.
+
+### Building the .appxupload
+
+Logically, the next step is to build the .appxupload. In the `Deploy to the Microsoft Store` job, I have some steps related to Release Notes first, but I'll explain those steps later.
+
+So how do you actually build the .appxupload? 
+
+Good question!
+
+I used, for example, [this guide](https://www.dotnetapp.com/github-actions-for-uwp-apps-the-good-and-the-bad-and-the-ugly/) as a reference, but ultimately, I kept running into issues that kept forcing me to come up with my own solutions.
+
+First, the simple part: install necessary dependencies/tools with the `Setup Unity UWP`, `Setup Developer Command Prompt for Microsoft Visual C++`, and `Setup MSBuild` steps.
+Next, pain: my project's name has spaces in it, but these tools do not like spaces.
+
+So I need to go through the files in the Visual Studio Project/Solution, find instances of my project name, and replace those instances with a space-less version.
+Simple enough, right? 
+I tried playing around with `sed` and `awk`, but I've never been a fan. 
+I searched for a GitHub Action that could work for me, but I couldn't find a perfect one. 
+I ended up [forking an action](https://github.com/davidmfinol/replace-action) to get it to work for me.
+
+Alright, space issue fixed. 
+Just one more issue: Unity doesn't generate a Visual Studio Project/Solution with the expected Microsoft Store identifiers.
+So I use some Powershell scripting in the `Update manifest name` step to add the expected identifiers.
+
+The `Decode the Pfx`, `Build the .appxupload`, and `Remove the .pfx` steps are then relatively painless.
+Well, I say painless, but that's because I've already discussed the `out of disk space` issue.
+Specifically, this was the issue: `/p:AppxBundlePlatforms="x86|x64|arm"`.
+My .appxupload is a zip file with 3 packages: 1 for each of x86, x64, and arm.
+As I mentioned before, I could have built these 3 packages on separate runners and merged them afterwards, but I'm glad I didn't try going down that route.
+
+### StoreBroker
+
+So now that we have the .appxupload, we just need to submit it to the Microsoft Store.
+
+The tool that Microsoft provides for this purpose is [StoreBroker](https://github.com/microsoft/StoreBroker).
+
+StoreBroker expects that the release notes exist in a `PDP.xml` file, so let's review those Release Notes steps.
+`Update Release Notes` gets the release notes from the GitHub Release and saves it to a fastlane file. 
+`Get Release Notes` gets the release notes from the fastlane file.
+`Apply Release Notes` is where we go through the `PDP.xml` and replace the release notes with the new release notes.
+Luckily, I already have the `davidmfinol/replace-action` action to help with this.
+
+For the `Upload to the Microsoft Store` step itself, refer to the [StoreBroker docs](https://github.com/microsoft/StoreBroker/blob/master/Documentation/SETUP.md).
+
+It wasn't easy, but getting all of the above to succeed has been hugely satisfying for me.
+I hope you've found satisfaction here too!
 
 ## Continue
+
 If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 7: Conclusion](gameci-7_conclusion.html).

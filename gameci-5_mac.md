@@ -90,7 +90,7 @@ Instead of using a Linux runner, we need a macOS runner for the StandaloneOSX ar
 
 You may want to refer to both [Apple's code-signing documentation](https://developer.apple.com/support/code-signing/) as well as [the script I use for signing mac builds](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/fastlane/sign-mac-build.sh).
 
-The mac app can be deployed both via Steam (see [GameCI 7: Conclusion](gameci-7_conclusion.html) and via the Mac App Store (see below), but the `Zip App` and `Upload Zip to GitHub Release` steps also enable players to get the build from the GitHub Releases page.
+The mac app can be deployed both via Steam (see [GameCI 7: Conclusion](gameci-7_conclusion.html)) and via the Mac App Store (see below), but the `Zip App` and `Upload Zip to GitHub Release` steps also enable players to get the build from the GitHub Releases page.
 Note that the `Upload Zip to GitHub Release` step requires a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 ## Deploy to the Mac App Store

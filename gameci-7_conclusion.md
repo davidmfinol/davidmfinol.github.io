@@ -1,6 +1,6 @@
 # GameCI 7: Conclusion
 
-Continuing from [GameCI 6](gameci-6_windows.html), let's examine the `Deploy to the Steam Marketplace` and `Announce Release to Social Media` jobs.
+Continuing from [GameCI 6](gameci-6_windows.html) (the wordiest part of this series), let's finish by examining the `Deploy to the Steam Marketplace` and `Announce Release to Social Media` jobs.
 
 ## Deploy to the Steam Marketplace
 
@@ -53,7 +53,16 @@ Continuing from [GameCI 6](gameci-6_windows.html), let's examine the `Deploy to 
 {% endraw %}
 {% endhighlight %}
 
-***TODO***
+You can't call yourself a Game Developer unless you have a game published on Steam, right?
+
+Well, that statement may be going too far, but it's undeniable that Steam is a huge force in gaming.
+
+As such, having automated Steam deployments is likely going to be desirable for a lot of game developers.
+And for that, I refer you to [the GameCI Steam deployment docs](https://game.ci/docs/github/deployment/steam).
+
+For additional details, I would mention:
+1. This job only runs when triggered by either a GitHub Release or a workflow dispatch with `release Steam` as the input.
+2. You'll still need a small/quick manual step to promote the `prerelease` branch to the `default` branch in the Steam Partnerworks console.
 
 ## Announce Release to Social Media
 
@@ -97,8 +106,18 @@ Continuing from [GameCI 6](gameci-6_windows.html), let's examine the `Deploy to 
 {% endraw %}
 {% endhighlight %}
 
-***TODO***
+This last job is short and sweet.
+
+It creates some announcement text that looks like `Released CGS $VERSION! $RELEASE_NOTES`.
+It does [some processing to allow new lines in that text](https://trstringer.com/github-actions-multiline-strings/).
+And then it uses the [Ilshidur/action-discord](https://github.com/Ilshidur/action-discord) and [ethomson/send-tweet-action](https://github.com/marketplace/actions/send-tweet-action) actions to post on Discord and make a Tweet.
+
+After all, we gotta let the world know everything about our app. 
 
 ## Final Thoughts
 
-***TODO***
+Speaking of letting the world know about our app, you likely noticed Card Game Simulator (CGS) come up in this series.
+If you're interested in being able to create, share, and play card games online, please check out [the CGS website](https://www.cardgamesimulator.com/)!
+
+With the necessary self-promotion done, I also need to mention that I hope this series has been helpful!
+If you have additional questions or if you just want to talk, please join us on [the GameCI Discord Server](https://game.ci/discord)!
