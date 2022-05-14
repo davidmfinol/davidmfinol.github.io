@@ -192,4 +192,4 @@ For additional details about iOS builds and deployment, refer to [the GameCI iOS
 
 ## Continue
 
-If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 6: Build and Deploy with Windows](gameci-6_windows.html).
+I recommend continuing with [GameCI 6: Build and Deploy with Windows](gameci-6_windows.html).

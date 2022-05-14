@@ -88,4 +88,4 @@ As setup, I did create and edit [cgs-WebGL.html](https://github.com/finol-digita
 
 ## Continue
 
-If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 5: Build and Deploy with MacOS](gameci-5_mac.html).
+I recommend continuing with [GameCI 5: Build and Deploy with MacOS](gameci-5_mac.html).
