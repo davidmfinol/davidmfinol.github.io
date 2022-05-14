@@ -116,6 +116,7 @@ For additional details about iOS builds, refer to [the GameCI iOS docs](https://
 ## StandaloneLinux64
 
 The Linux executable can be deployed through Steam (see [GameCI 7: Conclusion](gameci-7_conclusion.html), but the `Zip Build` and `Upload Zip to GitHub Release` steps also enable players to get the build from the GitHub Releases page.
+Note that the `Upload Zip to GitHub Release` step requires a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 ## WebGL
 
