@@ -66,9 +66,23 @@ Continuing from [GameCI 5](gameci-5_mac.html), let's examine the `Build with Win
 {% endraw %}
 {% endhighlight %}
 
-TODO
+Most of this job should be self-explanatory after reading [the GameCI Builder docs](https://game.ci/docs/github/builder), but here are some additional details:
+
+Instead of using a Linux runner, we need a Windows runner because Windows builds require Windows as a runner if using [IL2CPP as the scripting backend](https://docs.unity3d.com/Manual/IL2CPP.html). 
+I recommend using IL2CPP, as it is significantly more performant than Mono.
+
+The Windows executables can be deployed via Steam (see [GameCI 7: Conclusion](gameci-7_conclusion.html), but the `Zip Build` and `Upload Zip to GitHub Release` steps also enable players to get the builds from the GitHub Releases page.
+Note that the `Upload Zip to GitHub Release` step requires a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+
+You might also ask: Why does this job run after the Linux and Mac builds instead of in parallel to those builds?
+The answer is because I am using a Unity Pro license which only allows 2 seats to be used at a time.
+See the [GameCI docs for details](https://game.ci/docs/docker/docker-images#concurrent-builds-on-windows-and-macos).
+
+I don't have much else to say about building the 32-bit and 64-bit Windows executables, but I definitely do have a ton more to say about building for WSAPlayer and deploying to the Microsoft Store...
 
 ## Deploy to the Microsoft Store
+
+So I'll dump the code here, but I highly recommend you first skip past it and come back to it as necessary:
 
 {% highlight yml %}
 {% raw %}
@@ -212,7 +226,7 @@ TODO
 {% endraw %}
 {% endhighlight %}
 
-TODO
+***TODO***
 
 ## Continue
 If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 7: Conclusion](gameci-7_conclusion.html).

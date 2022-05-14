@@ -88,7 +88,7 @@ Those target platforms are `Android`, `iOS`, `StandaloneLinux64`, and `WebGL`.
 {% endraw %}
 {% endhighlight %}
 
-Most of this job matrix should be self-explanatory after reading [the GameCI Builder docs](https://game.ci/docs/github/builder), but I'll provide some additional notes for each target platform below.
+Most of this job matrix should be self-explanatory after reading [the GameCI Builder docs](https://game.ci/docs/github/builder), but I'll provide some additional details for each target platform below.
 
 ## Android
 
@@ -116,7 +116,7 @@ For additional details about iOS builds and deployment, refer to [the GameCI iOS
 
 ## StandaloneLinux64
 
-The Linux executable can be deployed through Steam (see [GameCI 7: Conclusion](gameci-7_conclusion.html), but the `Zip Build` and `Upload Zip to GitHub Release` steps also enable players to get the build from the GitHub Releases page.
+The Linux executable can be deployed via Steam (see [GameCI 7: Conclusion](gameci-7_conclusion.html), but the `Zip Build` and `Upload Zip to GitHub Release` steps also enable players to get the build from the GitHub Releases page.
 Note that the `Upload Zip to GitHub Release` step requires a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 ## WebGL
