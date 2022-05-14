@@ -72,7 +72,7 @@ jobs:
 
 ## Trigger On
 
-As you can see, there are 4 triggers on: `push` to develop, `pull_request` to main, `release` published (with GitHub Release), and `workflow_dispatch`.
+As you can see, there are 4 triggers: `push` to develop, `pull_request` to main, `release` published (with a GitHub Release), and `workflow_dispatch`.
 
 The `push` and `pull_request` triggers should run checks to validate each commit, along with a final validation before merging changes to `main`.
 Runs on `push` and `pull_request` should only trigger if a file has changed in the actual Unity project, ie in `Assets/`, `Packages/`, or `ProjectSettings/`.
