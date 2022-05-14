@@ -3,6 +3,7 @@
 Continuing from [GameCI 3](gameci-3_linuxbuild.html), let's examine the `Deploy to the Google Play Store` and `Deploy to the Web via GitHub Pages` jobs.
 
 ## Deploy to the Google Play Store
+
 {% highlight yml %}
 {% raw %}
   deployToGooglePlay:
@@ -46,9 +47,11 @@ Continuing from [GameCI 3](gameci-3_linuxbuild.html), let's examine the `Deploy 
 
 This job only runs when triggered by either a GitHub Release or a workflow dispatch with `release Android` as the input.
 Note that we use `fastlane/metadata/android/en-US/changelogs/default.txt` to publish the release notes.
-For more details, refer to [the GameCI Android deployment docs](https://game.ci/docs/github/deployment/android).
+
+For additional details about Android builds and deployment, refer to [the GameCI Android docs](https://game.ci/docs/github/deployment/android).
 
 ## Deploy to the Web via GitHub Pages
+
 {% highlight yml %}
 {% raw %}
   deployToGitHubPages:
@@ -84,4 +87,5 @@ Once copied, simply committing the files will trigger a GitHub Pages deployment.
 As setup, I did create and edit [cgs-WebGL.html](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/docs/cgs-webgl.html), though work remains to make this web page look and feel nicer.
 
 ## Continue
+
 If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 5: Build and Deploy with MacOS](gameci-5_mac.html).

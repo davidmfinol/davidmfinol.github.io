@@ -9,6 +9,7 @@ In particular, I belive that [Unity](https://unity.com/) game projects don't hav
 Hopefully, this guide to how I built the CI/CD pipeline for my Unity project will help you with yours.
 
 ## My Workflow
+
 A picture is worth a thousand words, so take a look at the visualization graph for my workflow:
 ![Test, Build, and Deploy with GameCI](assets/img/cgs-workflow.png)
 
@@ -18,6 +19,7 @@ I chose [GitHub Actions](https://github.com/features/actions) because it is tigh
 Plus, it makes this nice visualization graph.
 
 ## Pieces of the Workflow
+
 You may have noticed that there are a lot of different jobs in the workflow, but only some of them ran, while others did not run.
 Later, I'll explain all the different jobs and what they do/how they work, but the first thing to examine is why some jobs run while others do not.
 If you look at the names of the jobs that didn't run, you may be able to guess the reason: The jobs that deploy to production (the CD part of CI/CD) were not part of this workflow run.
@@ -31,8 +33,11 @@ The modularity of my workflow is enabled by setting up different triggers and bl
 You may refer to the [complete workflow on GitHub](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/.github/workflows/main.yml), but going forward, I will excerpt the relevant code here.
 
 ## The Code
+
 Let's get started with the start of my workflow:
-```yml
+
+{% highlight yml %}
+{% raw %}
 # .github/workflows/main.yml
 name: Test, Build, and Deploy with GameCI
 on:
@@ -62,9 +67,11 @@ on:
         required: false
         default: ''
 jobs:
-```
+{% endraw %}
+{% endhighlight %}
 
 ## Trigger On
+
 As you can see, there are 4 triggers on: `push` to develop, `pull_request` to main, `release` published (with GitHub Release), and `workflow_dispatch`.
 
 The `push` and `pull_request` triggers should run checks to validate each commit, along with a final validation before merging changes to `main`.
@@ -83,6 +90,7 @@ My Steam depots involve 4 artifacts: 1) Windows 32-bit, 2) Windows 64-bit, 3) Li
 Building and deploying these artifacts is split across multiple jobs, so it would now be good to get a high-level overview of all the jobs.
 
 ## The Jobs
+
 Going into detail on each job would make this article too long.
 Furthermore, a reader who only wants to publish Android builds on Google Play would be interested in a different set of jobs than a reader who wants to publish PC games on Steam.
 Therefore, here is a quick overview of each job, with links to more info, if more info is desired.
@@ -134,4 +142,5 @@ Posts to Discord and Twitter about the successful production deployment.
 See [GameCI 7: Conclusion](gameci-7_conclusion.html).
 
 ## Continue
+
 If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 2: Testing](gameci-2_testing.html).

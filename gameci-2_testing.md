@@ -3,7 +3,9 @@
 Continuing from [GameCI 1](gameci-1_intro.html), let's examine the `Test Code Quality` job.
 
 ## The Code
+
 This is the full `tests` job:
+
 {% highlight yml %}
 {% raw %}
   tests:
@@ -103,6 +105,7 @@ The steps for this job fall into 3 categories:
 3. Release Management
 
 ## Unity Test Runner
+
 This first part is the core of any CI pipeline: the unit tests.
 The code coverage for my project isn't actually that high, but I do have coverage for the most critical code paths.
 And I'd like to ensure that those critical code paths are always well-tested.
@@ -112,6 +115,7 @@ Please refer to [the GameCI documentation website](https://game.ci/docs/github) 
 After you have an understanding of the `Checkout Repository`, `Cache Library`, and `Run Unit Tests` steps, you may want to move on to SonarQube.
 
 ## SonarQube
+
 [SonarQube](https://www.sonarqube.org/) is a code analysis tool that you may want to use to help maintain a high level of code quality for your project.
 If you are interested, I recommend starting by reading the [docs for Sonar Cloud](https://docs.sonarcloud.io/).
 Since we are using GitHub Actions, we can [start with Sonar Cloud for GitHub](https://docs.sonarcloud.io/getting-started/github/).
@@ -165,6 +169,7 @@ After your first successful Sonar scan, you'll want to configure your rules and 
 Once you have everything configured as you like, you can use the `SonarQube Quality Gate Check` step to ensure that your code quality requirements are always met.
 
 ## Release Management
+
 The final part of this first job involves some book-keeping surrounding GitHub Releases.
 As mentioned in Part 1, we use `if: github.event.action == 'published'` to detect when a Release has been created through the GitHub UI.
 This release will include the Release Notes, and we want to capture these release notes for subsequent runs.
@@ -172,6 +177,7 @@ We can simply commit the release notes to the git repo with the `Update Release 
 GitHub Actions has safeguards in place to ensure that a workflow does not retrigger itself, so we don't have to worry about potentially causing an infinite loop of workflow runs.
 
 ## Continue
+
 With that, we have put in unit tests, quality checks, and release management.
 We're now ready to move on to actually building and deploying our game.
 If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 3: Build with Linux](gameci-3_linuxbuild.html).

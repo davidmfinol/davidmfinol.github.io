@@ -6,6 +6,7 @@ Those target platforms are `Android`, `iOS`, `StandaloneLinux64`, and `WebGL`.
 [The GameCI documentation website](https://game.ci/docs/github) is the best resource for learning how to build with GameCI, so I would recommend starting there before we examine my workflow's code below.
 
 ## The Code
+
 {% highlight yml %}
 {% raw %}
   buildWithLinux:
@@ -104,14 +105,14 @@ sudo rm -rf "$AGENT_TOOLSDIRECTORY"
 df -h
 ```
 
-For additional details about Android builds, refer to [the GameCI Android docs](https://game.ci/docs/github/deployment/android).
+For additional details about Android builds and deployment, refer to [the GameCI Android docs](https://game.ci/docs/github/deployment/android).
 
 ## iOS
 
 Building for iOS is a 2-stage process: This `Build with Linux` job is the first stage, but the second stage requires a macOS runner.
 This job generates an Xcode project, which is uploaded as an artifact to be used in [GameCI 5: Build and Deploy with MacOS](gameci-5_mac.html).
 
-For additional details about iOS builds, refer to [the GameCI iOS docs](https://game.ci/docs/github/deployment/ios).
+For additional details about iOS builds and deployment, refer to [the GameCI iOS docs](https://game.ci/docs/github/deployment/ios).
 
 ## StandaloneLinux64
 
