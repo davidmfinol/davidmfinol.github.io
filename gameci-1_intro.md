@@ -29,8 +29,8 @@ For every push to my develop branch I run the test and build jobs, to confirm th
 When I want to deploy to production, I [create a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) on GitHub. The release will trigger the workflow to run with the production deployment jobs.
 I can also [manually run the workflow](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow), with the option to input which jobs should run.
 
-The modularity of my workflow is enabled by setting up different triggers and blocking certain jobs with `if`s.
-You may refer to the [complete workflow on GitHub](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/.github/workflows/main.yml), but going forward, I will excerpt the relevant code here.
+The modularity of my workflow is enabled both by different triggers and by blocking certain jobs with conditions.
+You may refer to the [complete workflow](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/.github/workflows/main.yml) on GitHub, but going forward I will also excerpt the relevant code here.
 
 ## The Code
 
