@@ -82,8 +82,8 @@ For example, if we modify the README.md, we wouldn't want the workflow to run, s
 Runs on `release` will trigger whenever a release is created in the GitHub UI, and we can use `if: github.event.action == 'published'` to detect this scenario.
 
 The triggers for `workflow_dispatch` are the most interesting, since they are where we have setup the most control over the workflow.
-For example, if we wanted to create 2 Windows .exe's to download and run, we can simply pass `StandaloneWindows StandaloneWindows64` as the input.
-This would create both 32-bit and 64-bit Windows executables and upload them to GitHub, where they could then be downloaded for testing.
+For example, if we wanted to create 2 Windows .exe's to download and run, we could simply pass `StandaloneWindows StandaloneWindows64` as the input.
+This would create both a 32-bit and a 64-bit Windows executable and upload them to GitHub, where they could be downloaded for testing.
 
 Taking it a step further, we could input `release Steam` to run the entire production deployment pipeline for Steam.
 My Steam depots involve 4 artifacts:
@@ -102,8 +102,8 @@ Therefore, here is a quick overview of each job, with links to more info, if mor
 You may read these descriptions and then pick and choose to read only that which is relevant to you.
 
 ### Test Code Quality
-I consider this job to be the most fundamental in any CI pipeline, as it is the one responsible for actually running your [unit tests](https://docs.unity3d.com/Manual/testing-editortestsrunner.html).
-I also set up [SonarQube](https://www.sonarqube.org/) quality checks and do some release management.
+I consider this job to be the most important one, as it is responsible for running my [tests](https://docs.unity3d.com/Manual/testing-editortestsrunner.html).
+I have also set up [SonarQube](https://www.sonarqube.org/) quality checks and do some release management.
 See [GameCI 2: Testing](gameci-2_testing.html).
 
 ### Build with Linux
