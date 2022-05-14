@@ -81,7 +81,7 @@ For example, if we modify the README.md for our project, we wouldn't want the wo
 
 Runs on `release` will trigger whenever a release is created in the GitHub UI, and we can use `if: github.event.action == 'published'` to detect this scenario.
 
-The triggers for `workflow_dispatch` are the most interesting, since that's where we have setup the most control over the workflow.
+The triggers for `workflow_dispatch` are the most interesting, since they are where we have setup the most control over the workflow.
 For example, if we wanted to create 2 Windows .exe's to download and run, we can simply pass `StandaloneWindows StandaloneWindows64` as the input.
 This would create both 32-bit and 64-bit Windows executables and upload them to GitHub, where they could then be downloaded for testing.
 
