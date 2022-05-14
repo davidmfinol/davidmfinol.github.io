@@ -124,4 +124,4 @@ Note that the `Upload Zip to GitHub Release` step requires a [Personal Access To
 For details on deploying the WebGL build, see [GameCI 4: Deploy with Linux](gameci-4_linuxdeploy.html).
 
 ## Continue
-If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 4: Deploy with Linux](gameci-4_linuxdeploy.html).
+I recommend continuing with [GameCI 4: Deploy with Linux](gameci-4_linuxdeploy.html).

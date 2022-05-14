@@ -320,4 +320,4 @@ If you're a fellow Unity + UWP developer, I hope your journey to an automated de
 
 ## Continue
 
-If you have decided that you would like to read about all the jobs in order, I'd recommend continuing with [GameCI 7: Conclusion](gameci-7_conclusion.html).
+I recommend concluding with [GameCI 7: Conclusion](gameci-7_conclusion.html).
