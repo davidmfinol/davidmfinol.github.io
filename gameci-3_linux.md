@@ -1,4 +1,4 @@
-# GameCI 3: Build with Linux
+# GameCI 3: Build and Deploy with Linux
 
 Continuing from [GameCI 2](gameci-2_testing.html), let's examine the `Build with Linux` job matrix, along with the `Deploy to the Google Play Store` and `Deploy to the Web via GitHub Pages` jobs.
 
@@ -127,6 +127,8 @@ See the `Deploy to the Web via GitHub Pages` job below.
 
 ## Deploy to the Google Play Store
 
+As mentioned earlier, [the GameCI Android docs](https://game.ci/docs/github/deployment/android) is the best resource for Android builds and deployment.
+
 {% highlight yml %}
 {% raw %}
   deployToGooglePlay:
@@ -168,10 +170,8 @@ See the `Deploy to the Web via GitHub Pages` job below.
 {% endraw %}
 {% endhighlight %}
 
-This job only runs when triggered by either a GitHub Release or a workflow dispatch with `release Android` as the input.
-Note that we use `fastlane/metadata/android/en-US/changelogs/default.txt` to publish the release notes.
-
-For additional details about Android builds and deployment, refer to [the GameCI Android docs](https://game.ci/docs/github/deployment/android).
+An additional detail about this job is that it only runs when triggered by either a GitHub Release or a workflow dispatch with `release Android` as the input.
+Also note that we use `fastlane/metadata/android/en-US/changelogs/default.txt` to publish the release notes.
 
 ## Deploy to the Web via GitHub Pages
 
