@@ -34,7 +34,7 @@ You may refer to the [complete workflow](https://github.com/finol-digital/Card-G
 
 ## The Code
 
-Let's get started with the start of my workflow:
+Let's get started with the first part of my workflow:
 
 {% highlight yml %}
 {% raw %}
