@@ -11,7 +11,7 @@ Hopefully, this guide to how I built the CI/CD pipeline for my Unity project wil
 ## My Workflow
 
 A picture is worth a thousand words, so take a look at the visualization graph for my workflow:
-![Test, Build, and Deploy with GameCI](assets/img/cgs-workflow.png)
+[![Test, Build, and Deploy with GameCI](assets/img/cgs-workflow.png)](https://davidmfinol.website/assets/img/cgs-workflow.png)
 
 Nowadays, developers have a lot of CI options (Unity Cloud Build, CircleCI, GitLab CI, and Jenkins are just a few examples).
 I chose [GitHub Actions](https://github.com/features/actions) because it is tightly integrated to the GitHub repo where I already keep my open-source project,
