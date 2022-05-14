@@ -1,4 +1,4 @@
-# GameCI 7: Conclusion
+# GameCI 6: Conclusion
 
 Continuing from [GameCI 5](gameci-5_windows.html), let's finish by examining the `Deploy to the Steam Marketplace` and `Announce Release to Social Media` jobs.
 

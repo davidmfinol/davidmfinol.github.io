@@ -1,4 +1,4 @@
-# GameCI 6: Build and Deploy with Windows
+# GameCI 5: Build and Deploy with Windows
 
 Continuing from [GameCI 4](gameci-4_mac.html), let's examine the `Build with Windows` and `Deploy to the Microsoft Store` jobs.
 

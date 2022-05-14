@@ -1,4 +1,4 @@
-# GameCI 5: Build and Deploy with MacOS
+# GameCI 4: Build and Deploy with MacOS
 
 Continuing from [GameCI 3](gameci-3_linux.html), let's examine the `Build with Mac`, `Deploy to the Mac App Store`, and `Deploy to the App Store` jobs.
 
