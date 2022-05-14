@@ -20,8 +20,8 @@ Plus, it makes this nice visual graph.
 
 ## Pieces of the Workflow
 
-You may have noticed that there are a lot of different jobs in the workflow, but only some of them ran, while others did not run.
-Later, I'll explain all the different jobs and what they do/how they work, but the first thing to examine is why some jobs run while others do not.
+You may have noticed that there are many different jobs in the workflow, where only some of them ran while others did not run.
+Later I'll explain all the different jobs and what they do/how they work, but the first thing to examine is why some jobs run while others do not.
 If you look at the names of the jobs that didn't run, you may be able to guess the reason: The jobs that deploy to production (the CD part of CI/CD) were not part of this workflow run.
 
 Depending on how you think of it, it could be argued that my workflow is actually multiple workflows in one.
