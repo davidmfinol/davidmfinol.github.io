@@ -260,7 +260,7 @@ But it gets complicated.
 ### Check It Out Again
 
 While developing this job, I ran into `out of disk space` issues.
-If you read part 3, you may remember that the Android builds are likely to run into the same issue.
+If you read [GameCI 3](gameci-3_linux.html), you may remember that the Android builds are likely to run into the same issue.
 You could work around the issue on Android by clearing some disk space, but I couldn't find a way to do the same here.
 Instead, I considered some other options:
 1. I could use a self-hosted runner with more space on it. This would require spending money in addition to time/effort, so I really wanted to keep this option as a last resort.
