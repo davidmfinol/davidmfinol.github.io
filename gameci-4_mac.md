@@ -81,14 +81,14 @@ Continuing from [GameCI 3](gameci-3_linux.html), let's examine the `Build with M
 {% endraw %}
 {% endhighlight %}
 
-Most of this job should be self-explanatory after reading [the GameCI Builder docs](https://game.ci/docs/github/builder), but here are some additional details:
+Most of this job should be self-explanatory after reading the [GameCI Builder docs](https://game.ci/docs/github/builder), but here are some additional details:
 
 Instead of using a Linux runner, we need a macOS runner for the StandaloneOSX artifact for a few reasons:
-1. StandaloneOSX builds require macOS if using [IL2CPP as the scripting backend](https://docs.unity3d.com/Manual/IL2CPP.html). I recommend using IL2CPP, for better performance than Mono.
+1. StandaloneOSX builds require macOS if using [IL2CPP as the scripting backend](https://docs.unity3d.com/Manual/IL2CPP.html). Use IL2CPP for better run-time performance than Mono.
 2. I accidentally submitted a bad version to the Apple Store, and now I have to use [a hack in fastlane](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/fastlane/Fastfile#L72) to allow my builds to be submitted to the Apple Store. Be careful when submitting to the App Store!
 3. In order for players to download and run a macOS executable, that executable must first be signed using the macOS `codesign` tool.
 
-You may want to refer to both [Apple's code-signing documentation](https://developer.apple.com/support/code-signing/) as well as [the script I use for signing mac builds](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/fastlane/sign-mac-build.sh).
+You may want to refer to both [Apple's code-signing documentation](https://developer.apple.com/support/code-signing/) as well as [my script for signing mac builds](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/fastlane/sign-mac-build.sh).
 
 The mac app can be deployed both via Steam (see [GameCI 6: Conclusion](gameci-6_conclusion.html)) and via the Mac App Store (see below), but the `Zip App` and `Upload Zip to GitHub Release` steps also enable players to get the build from the GitHub Releases page.
 Note that the `Upload Zip to GitHub Release` step requires a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
@@ -136,8 +136,8 @@ Note that the `Upload Zip to GitHub Release` step requires a [Personal Access To
 This job only runs when triggered by either a GitHub Release or a workflow dispatch with `release StandaloneOSX` as the input.
 This job takes the signed mac app and uses fastlane to build and deploy to the App Store.
 
-Now that MacOS can run iOS apps, I hesitate to recommend using a job similar to this one.
-Instead of providing additional details, I can only refer you to [the fastlane docs](https://docs.fastlane.tools/actions/appstore/).
+Now that [MacOS can run iOS apps](https://support.apple.com/guide/app-store/iphone-ipad-apps-mac-apple-silicon-fird2c7092da/mac), it's probably better to avoid the Mac App Store.
+If you'd like additional details anyway, refer to the [fastlane docs](https://docs.fastlane.tools/actions/appstore/).
 
 ## Deploy to the App Store
 
@@ -188,7 +188,7 @@ Instead of providing additional details, I can only refer you to [the fastlane d
 This job only runs when triggered by either a GitHub Release or a workflow dispatch with `release iOS` as the input.
 This job takes the iOS Xcode project (which was built in [GameCI 3: Build and Deploy with Linux](gameci-3_linux.html)) and uses fastlane to build and deploy to the App Store.
 
-For additional details about iOS builds and deployment, refer to [the GameCI iOS docs](https://game.ci/docs/github/deployment/ios).
+For additional details about iOS builds and deployment, refer to the [GameCI iOS docs](https://game.ci/docs/github/deployment/ios).
 
 ## Continue
 

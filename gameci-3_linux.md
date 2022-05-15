@@ -6,7 +6,7 @@ Continuing from [GameCI 2](gameci-2_testing.html), let's examine the `Build with
 
 We would ideally run all builds on Linux, but there are some constraints that mean we are only able to run a subset of our target builds on Linux.
 The eligible target platforms are `Android`, `iOS`, `StandaloneLinux64`, and `WebGL`.
-[The GameCI documentation website](https://game.ci/docs/github) is the best resource for learning how to build with GameCI, so read that first.
+Make sure to have read the [GameCI GitHub docs](https://game.ci/docs/github) before examining this job matrix.
 
 {% highlight yml %}
 {% raw %}
@@ -89,7 +89,7 @@ The eligible target platforms are `Android`, `iOS`, `StandaloneLinux64`, and `We
 {% endraw %}
 {% endhighlight %}
 
-Most of this job matrix should be self-explanatory after reading [the GameCI Builder docs](https://game.ci/docs/github/builder), but you can find some additional details for each target platform below.
+Most of this job matrix should be self-explanatory after reading the [GameCI Builder docs](https://game.ci/docs/github/builder), but you can find some additional details for each target platform below.
 
 ### Android
 
@@ -106,14 +106,14 @@ sudo rm -rf "$AGENT_TOOLSDIRECTORY"
 df -h
 ```
 
-For additional details about Android builds and deployment, refer to [the GameCI Android docs](https://game.ci/docs/github/deployment/android).
+For additional details about Android builds and deployment, refer to the [GameCI Android docs](https://game.ci/docs/github/deployment/android).
 
 ### iOS
 
 Building for iOS is a 2-stage process: This `Build with Linux` job is the first stage, but the second stage requires a macOS runner.
 This job generates an Xcode project, which is uploaded as an artifact to be used in [GameCI 4: Build and Deploy with MacOS](gameci-4_mac.html).
 
-For additional details about iOS builds and deployment, refer to [the GameCI iOS docs](https://game.ci/docs/github/deployment/ios).
+For additional details about iOS builds and deployment, refer to the [GameCI iOS docs](https://game.ci/docs/github/deployment/ios).
 
 ### StandaloneLinux64
 
@@ -127,7 +127,7 @@ See the `Deploy to the Web via GitHub Pages` job below.
 
 ## Deploy to the Google Play Store
 
-As mentioned earlier, [the GameCI Android docs](https://game.ci/docs/github/deployment/android) is the best resource for Android builds and deployment.
+As mentioned earlier, the [GameCI Android docs](https://game.ci/docs/github/deployment/android) is the best resource for Android builds and deployment.
 
 {% highlight yml %}
 {% raw %}
@@ -207,7 +207,7 @@ Also note that we use `fastlane/metadata/android/en-US/changelogs/default.txt` t
 This job only runs when triggered by either a GitHub Release or a workflow dispatch with `release WebGL` as the input.
 All this job does is copy the WebGL artifact to the correct location in the `/docs` folder of [GitHub Pages](https://pages.github.com/).
 Once copied, simply committing the files will trigger a GitHub Pages deployment.
-As setup, I did create and edit [cgs-WebGL.html](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/docs/cgs-webgl.html), though work remains to make this web page look and feel nicer.
+Note that this web page relies on custom html in the form of [cgs-WebGL.html](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/docs/cgs-webgl.html), though work remains to make this web page look and feel nicer.
 
 ## Continue
 

@@ -6,7 +6,7 @@ The reasons for such are many and better explained [all](https://www.synopsys.co
  [internet](https://en.wikipedia.org/wiki/CI/CD), so I won't be making a case for why you should be using CI/CD.
 Instead, I write this series of articles with the goal of helping Game Developers with their own pipelines.
 In particular, I believe that [Unity](https://unity.com/) game projects don't have as many resources for CI/CD as they should.
-Hopefully, this guide to how I built the CI/CD pipeline for my Unity project will help you with yours.
+Hopefully, this guide to the CI/CD pipeline for my Unity project will help you with yours.
 
 ## My Workflow
 
@@ -15,27 +15,29 @@ A picture is worth a thousand words, so take a look at the visualization graph f
 
 Nowadays, developers have many CI options.
 Unity Cloud Build, CircleCI, GitLab CI, and Jenkins are just a few examples.
-I chose [GitHub Actions](https://github.com/features/actions) because it is tightly integrated with the GitHub repository where I already keep my open-source project and GitHub provides free CI minutes for open-source projects.
+I chose [GitHub Actions](https://github.com/features/actions) because it is tightly integrated with the GitHub repository where I already keep my open-source project, and GitHub provides free CI minutes for open-source projects.
 Plus, it makes this nice visual graph.
+
+Let's go over my workflow together.
 
 ## Pieces of the Workflow
 
 You may have noticed that there are many different jobs in the workflow, where only some of them ran while others did not run.
-Later I'll explain all the different jobs and what they do/how they work, but the first thing to examine is why some jobs run while others do not.
+Later we'll go into all the different jobs and what they do/how they work, but the first thing to examine is why some jobs run while others do not.
 If you look at the names of the jobs that didn't run, you may be able to guess the reason: The jobs that deploy to production (the CD part of CI/CD) were not part of this workflow run.
 
-Depending on how you think of it, it could be argued that my workflow is composed of multiple workflows.
-For every push to my develop branch I run the test and build jobs, to confirm that new commits didn't break anything.
-When I want to deploy to production, I [create a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) on GitHub.
-The release will trigger the workflow to run with the production deployment jobs.
-I can also [manually run the workflow](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow), with the option to input which jobs should run.
+Depending on how you think of it, it could be argued that this workflow is composed of multiple workflows.
+For every push to the develop branch, it runs the test and build jobs, to confirm that new commits didn't break anything.
+When it's time to deploy to production, we [create a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) through the GitHub UI.
+The release will trigger the workflow to run the production deployment jobs.
+We can also [manually run the workflow](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow), with the option to input which jobs should run.
 
-The modularity of my workflow is enabled both by different triggers and by blocking certain jobs with conditions.
-You may refer to the [complete workflow](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/.github/workflows/main.yml) on GitHub, but going forward I will also excerpt the relevant code here.
+The modularity of this workflow is enabled both by different triggers and by blocking certain jobs with conditions.
+You may refer to the [complete workflow](https://github.com/finol-digital/Card-Game-Simulator/blob/develop/.github/workflows/main.yml) on GitHub, but you may also refer to the code excerpts included here.
 
 ## The Code
 
-Let's get started with the first part of my workflow:
+Let's get started with the first part of the workflow:
 
 {% highlight yml %}
 {% raw %}
@@ -97,12 +99,12 @@ Building and deploying these artifacts is split across multiple jobs, so it woul
 
 ## The Jobs
 
-For each job below, I have put a quick description and a link to additional details.
+For each job below, there is a quick description and a link to additional details.
 You may read these descriptions and then pick and choose to read only that which is relevant to you.
 
 ### Test Code Quality
-I consider this job to be the most important one, as it is responsible for running my [tests](https://docs.unity3d.com/Manual/testing-editortestsrunner.html).
-I have also set up [SonarQube](https://www.sonarqube.org/) quality checks and do some release management.
+This job is the most important one, as it is responsible for running the [unit tests](https://docs.unity3d.com/Manual/testing-editortestsrunner.html).
+It also has [SonarQube](https://www.sonarqube.org/) quality checks and does some release management.
 See [GameCI 2: Testing](gameci-2_testing.html).
 
 ### Build with Linux
