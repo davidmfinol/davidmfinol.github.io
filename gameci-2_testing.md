@@ -180,4 +180,4 @@ GitHub Actions has safeguards in place to ensure that a workflow does not re-tri
 
 With that, we have put in unit tests, quality checks, and release management.
 We're now ready to move on to actually building and deploying our game.
-I recommend continuing with [GameCI 3: Build and Deploy with Linux](gameci-3_linux.html).
+Continue with [GameCI 3: Build and Deploy with Linux](gameci-3_linux.html).

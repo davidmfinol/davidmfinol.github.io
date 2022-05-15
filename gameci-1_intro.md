@@ -119,15 +119,15 @@ See [GameCI 3: Build and Deploy with Linux](gameci-3_linux.html).
 
 ### Build with Mac
 Builds the StandaloneOSX artifact and signs it to generate `Card Game Simulator.app`.
-See [GameCI 4: Build and Deploy with Mac](gameci-4_mac.html).
+See [GameCI 4: Build and Deploy with MacOS](gameci-4_mac.html).
 
 ### Deploy to the App Store
 Takes the iOS artifact and uses fastlane to build and deploy to the App Store.
-See [GameCI 4: Build and Deploy with Mac](gameci-4_mac.html).
+See [GameCI 4: Build and Deploy with MacOS](gameci-4_mac.html).
 
 ### Deploy to the Mac App Store
 Takes the StandaloneOSX artifact and uses fastlane to deploy it to the Mac App Store.
-See [GameCI 4: Build and Deploy with Mac](gameci-4_mac.html).
+See [GameCI 4: Build and Deploy with MacOS](gameci-4_mac.html).
 
 ### Build with Windows
 Builds the StandaloneWindows and StandaloneWindows64 artifacts.
@@ -147,4 +147,4 @@ See [GameCI 6: Conclusion](gameci-6_conclusion.html).
 
 ## Continue
 
-If you would like to read about the jobs in more detail, I'd recommend continuing with [GameCI 2: Testing](gameci-2_testing.html).
+If you would like to read about the jobs in more detail, continue with [GameCI 2: Testing](gameci-2_testing.html).

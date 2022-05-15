@@ -192,4 +192,4 @@ For additional details about iOS builds and deployment, refer to [the GameCI iOS
 
 ## Continue
 
-I recommend continuing with [GameCI 5: Build and Deploy with Windows](gameci-5_windows.html).
+Continue with [GameCI 5: Build and Deploy with Windows](gameci-5_windows.html).

@@ -69,14 +69,14 @@ Continuing from [GameCI 4](gameci-4_mac.html), let's examine the `Build with Win
 Most of this job should be self-explanatory after reading [the GameCI Builder docs](https://game.ci/docs/github/builder), but here are some additional details:
 
 Instead of using a Linux runner, we need a Windows runner because Windows builds require Windows as a runner if using [IL2CPP as the scripting backend](https://docs.unity3d.com/Manual/IL2CPP.html). 
-I recommend using IL2CPP, for better performance than Mono.
+The main reason to use IL2CPP instead of Mono is for better run-time performance.
 
 The Windows executables can be deployed via Steam (see [GameCI 6: Conclusion](gameci-6_conclusion.html), but the `Zip Build` and `Upload Zip to GitHub Release` steps also enable players to get the builds from the GitHub Releases page.
 Note that the `Upload Zip to GitHub Release` step requires a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 You might also ask: Why does this job run after the Linux and Mac builds instead of in parallel to those builds?
-The answer is because I am using a Unity Pro license which only allows 2 seats to be used at a time.
-See the [GameCI docs for details](https://game.ci/docs/docker/docker-images#concurrent-builds-on-windows-and-macos).
+The answer is because Unity Pro licenses only allow 2 seats to be used at a time.
+See [the GameCI docs on concurrent builds](https://game.ci/docs/docker/docker-images#concurrent-builds-on-windows-and-macos) for details.
 
 I don't have much else to say about building the 32-bit and 64-bit Windows executables, but I definitely do have a ton more to say about building for WSAPlayer and deploying to the Microsoft Store...
 
@@ -317,7 +317,6 @@ It wasn't easy, but getting all of the above to succeed has been hugely satisfyi
 I suspect that there are not many other Unity developers that are building UWP apps for the Microsoft Store.
 If you're a fellow Unity + UWP developer, I hope your journey to an automated deployment pipeline is easier than mine was!
 
-
 ## Continue
 
-I recommend concluding with [GameCI 6: Conclusion](gameci-6_conclusion.html).
+Continue with [GameCI 6: Conclusion](gameci-6_conclusion.html).

@@ -58,11 +58,11 @@ You can't call yourself a Game Developer unless you have a game published on Ste
 Well, that statement may be going too far, but it's undeniable that Steam is a huge force in gaming.
 
 As such, having automated Steam deployments is likely going to be desirable for a lot of game developers.
-And for that, I refer you to [the GameCI Steam deployment docs](https://game.ci/docs/github/deployment/steam).
+And for that, refer to [the GameCI Steam deployment docs](https://game.ci/docs/github/deployment/steam).
 
-For additional details, I would mention:
+Note 2 additional details:
 1. This job only runs when triggered by either a GitHub Release or a workflow dispatch with `release Steam` as the input.
-2. You'll still need a small/quick manual step to promote the `prerelease` branch to the `default` branch in the Steam Partnerworks console.
+2. You'll still need a small/quick manual step to promote the `prerelease` branch to the `default` branch in [the SteamWorks console](https://partner.steamgames.com/dashboard).
 
 ## Announce Release to Social Media
 

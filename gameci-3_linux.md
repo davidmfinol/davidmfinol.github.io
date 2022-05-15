@@ -6,7 +6,7 @@ Continuing from [GameCI 2](gameci-2_testing.html), let's examine the `Build with
 
 We would ideally run all builds on Linux, but there are some constraints that mean we are only able to run a subset of our target builds on Linux.
 The eligible target platforms are `Android`, `iOS`, `StandaloneLinux64`, and `WebGL`.
-[The GameCI documentation website](https://game.ci/docs/github) is the best resource for learning how to build with GameCI, so I would recommend reading that first.
+[The GameCI documentation website](https://game.ci/docs/github) is the best resource for learning how to build with GameCI, so read that first.
 
 {% highlight yml %}
 {% raw %}
@@ -89,7 +89,7 @@ The eligible target platforms are `Android`, `iOS`, `StandaloneLinux64`, and `We
 {% endraw %}
 {% endhighlight %}
 
-Most of this job matrix should be self-explanatory after reading [the GameCI Builder docs](https://game.ci/docs/github/builder), but I'll provide some additional details for each target platform below.
+Most of this job matrix should be self-explanatory after reading [the GameCI Builder docs](https://game.ci/docs/github/builder), but you can find some additional details for each target platform below.
 
 ### Android
 
@@ -211,4 +211,4 @@ As setup, I did create and edit [cgs-WebGL.html](https://github.com/finol-digita
 
 ## Continue
 
-I recommend continuing with [GameCI 4: Build and Deploy with MacOS](gameci-4_mac.html).
+Continue with [GameCI 4: Build and Deploy with MacOS](gameci-4_mac.html).
