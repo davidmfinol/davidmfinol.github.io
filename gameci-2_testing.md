@@ -111,7 +111,7 @@ The code coverage for my project isn't actually that high, but I do have coverag
 And I'd like to ensure that those critical code paths are always well-tested.
 
 The [Unity Test Framework](https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/index.html) is the obvious option for Unity unit tests, and as a maintainer for GameCI, I recommend running tests with the [Unity Test Runner action](https://github.com/marketplace/actions/unity-test-runner).
-Please refer to the [GameCI GitHub docs](https://game.ci/docs/github) as the best resource for how to use the Unity test runner.
+Please refer to the [GameCI GitHub docs](https://game.ci/docs/github/getting-started) as the best resource for how to use the Unity test runner.
 After you have an understanding of the `Checkout Repository`, `Cache Library`, and `Run Unit Tests` steps, you may want to move on to SonarQube.
 
 ## SonarQube

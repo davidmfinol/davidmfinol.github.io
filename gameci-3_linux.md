@@ -6,7 +6,7 @@ Continuing from [GameCI 2](gameci-2_testing.html), let's examine the `Build with
 
 We would ideally run all builds on Linux, but there are some constraints that mean we are only able to run a subset of our target builds on Linux.
 The eligible target platforms are `Android`, `iOS`, `StandaloneLinux64`, and `WebGL`.
-Make sure to have read the [GameCI GitHub docs](https://game.ci/docs/github) before examining this job matrix.
+Make sure to have read the [GameCI GitHub docs](https://game.ci/docs/github/getting-started) before examining this job matrix.
 
 {% highlight yml %}
 {% raw %}
