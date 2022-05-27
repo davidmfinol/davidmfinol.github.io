@@ -55,6 +55,7 @@ This is the full `tests` job:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          rm -rf Library
           pwd; ls -alh
           xvfb-run --auto-servernum ${{ steps.setup-unity.outputs.unity-path }} -batchmode -nographics -quit -logFile "-" -customBuildName Card-Game-Simulator -projectPath . -executeMethod Packages.Rider.Editor.RiderScriptEditor.SyncSolution
           pwd; ls -alh
@@ -130,6 +131,7 @@ The `Activate Unity for SonarQube` step will let us use Unity to generate these 
 
 In the `SonarQube Analysis` step, the first thing we do is check for the .sln and .csproj files:
 ```bash
+rm -rf Library
 pwd; ls -alh
 xvfb-run --auto-servernum ${{ steps.setup-unity.outputs.unity-path }} -batchmode -nographics -quit -logFile "-" -customBuildName Card-Game-Simulator -projectPath . -executeMethod Packages.Rider.Editor.RiderScriptEditor.SyncSolution
 pwd; ls -alh
