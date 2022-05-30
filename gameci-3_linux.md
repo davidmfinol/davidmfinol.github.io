@@ -40,7 +40,19 @@ Make sure to have read the [GameCI GitHub docs](https://game.ci/docs/github/gett
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          lfs: true
+      - name: Create LFS file list
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+      - name: Restore LFS cache
+        uses: actions/cache@v3
+        id: lfs-cache
+        with:
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+      - name: Git LFS Pull
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard
       - uses: actions/cache@v3
         with:
           path: Library

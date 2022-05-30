@@ -23,7 +23,19 @@ Continuing from [GameCI 4](gameci-4_mac.html), let's examine the `Build with Win
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          lfs: true
+      - name: Create LFS file list
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+      - name: Restore LFS cache
+        uses: actions/cache@v3
+        id: lfs-cache
+        with:
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+      - name: Git LFS Pull
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard
       - uses: actions/cache@v3
         with:
           path: Library
@@ -96,7 +108,19 @@ So I'll dump the code here, but I highly recommend you first skip past it and co
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          lfs: true
+      - name: Create LFS file list
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+      - name: Restore LFS cache
+        uses: actions/cache@v3
+        id: lfs-cache
+        with:
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+      - name: Git LFS Pull
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard
       - name: Build Unity Project
         id: build
         uses: game-ci/unity-builder@v2
@@ -117,8 +141,10 @@ So I'll dump the code here, but I highly recommend you first skip past it and co
           mkdir C:/Card-Game-Simulator.git
           git clone https://github.com/finol-digital/Card-Game-Simulator.git C:/Card-Game-Simulator.git --depth=1
           mkdir C:/Card-Game-Simulator.git/build
-          cp -R build/WSAPlayer C:/Card-Game-Simulator.git/build
+          mv build/WSAPlayer C:/Card-Game-Simulator.git/build
+          ls C:/Card-Game-Simulator.git/build
           ls C:/Card-Game-Simulator.git/build/WSAPlayer
+          ls C:/Card-Game-Simulator.git/build/WSAPlayer/WSAPlayer
       - name: Update Release Notes
         working-directory: C:/Card-Game-Simulator.git
         if: github.event.action == 'published'
@@ -154,18 +180,18 @@ So I'll dump the code here, but I highly recommend you first skip past it and co
       - name: Remove spaces from project name
         uses: davidmfinol/replace-action@master
         with:
-          files: "C:/Card-Game-Simulator.git/build/WSAPlayer/Card Game Simulator.sln"
+          files: "C:/Card-Game-Simulator.git/build/WSAPlayer/WSAPlayer/Card Game Simulator.sln"
           replacements: "\"Card Game Simulator\"=\"CardGameSimulator\""
       - name: Remove spaces from project name 2
         uses: davidmfinol/replace-action@master
         with:
-          files: "C:/Card-Game-Simulator.git/build/WSAPlayer/Card Game Simulator/Card Game Simulator.vcxproj"
+          files: "C:/Card-Game-Simulator.git/build/WSAPlayer/WSAPlayer/Card Game Simulator/Card Game Simulator.vcxproj"
           replacements: "</PropertyGroup>=<ProjectName>CardGameSimulator</ProjectName></PropertyGroup>"
       - name: Update manifest name
         working-directory: C:/Card-Game-Simulator.git
         shell: pwsh
         env:
-          UwpProjectDirectory: build\WSAPlayer\Card Game Simulator
+          UwpProjectDirectory: build\WSAPlayer\WSAPlayer\Card Game Simulator
         run: |
           [xml]$manifest = get-content ".\$env:UwpProjectDirectory\Package.appxmanifest"
           $manifest.Package.Identity.Name = "FinolDigitalLLC.CardGameSimulator"
@@ -175,7 +201,7 @@ So I'll dump the code here, but I highly recommend you first skip past it and co
         working-directory: C:/Card-Game-Simulator.git
         shell: pwsh
         env:
-          UwpProjectDirectory: build\WSAPlayer\Card Game Simulator
+          UwpProjectDirectory: build\WSAPlayer\WSAPlayer\Card Game Simulator
           SigningCertificate: Card Game Simulator_StoreKey.pfx
         run: |
           $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.MICROSOFT_STORE_PFX_FILE }}")
@@ -186,21 +212,21 @@ So I'll dump the code here, but I highly recommend you first skip past it and co
         working-directory: C:/Card-Game-Simulator.git
         shell: pwsh
         env:
-          SolutionPath: build\WSAPlayer\Card Game Simulator.sln
+          SolutionPath: build\WSAPlayer\WSAPlayer\Card Game Simulator.sln
           SigningCertificate: Card Game Simulator_StoreKey.pfx
         run: msbuild $env:SolutionPath /p:Configuration="Master" /p:Platform="x64" /p:UapAppxPackageBuildMode="StoreUpload" /p:AppxBundle="Always" /p:AppxBundlePlatforms="x86|x64|arm" /p:PackageCertificateKeyFile=$env:SigningCertificate
       - name: Remove the .pfx
         working-directory: C:/Card-Game-Simulator.git
         shell: pwsh
         env:
-          UwpProjectDirectory: build\WSAPlayer\Card Game Simulator
+          UwpProjectDirectory: build\WSAPlayer\WSAPlayer\Card Game Simulator
           SigningCertificate: Card Game Simulator_StoreKey.pfx
         run: Remove-Item -path $env:UwpProjectDirectory\$env:SigningCertificate
       - name: Upload .appxupload
         uses: actions/upload-artifact@v3
         with:
           name: ${{ format('CardGameSimulator_{0}.0_x64_bundle_Master.appxupload', needs.buildWithWindows.outputs.buildVersion) }}
-          path: ${{ format('{0}\build\WSAPlayer\AppPackages\CardGameSimulator\CardGameSimulator_{1}.0_x64_bundle_Master.appxupload', 'C:\Card-Game-Simulator.git', needs.buildWithWindows.outputs.buildVersion) }}
+          path: ${{ format('{0}\build\WSAPlayer\WSAPlayer\AppPackages\CardGameSimulator\CardGameSimulator_{1}.0_x64_bundle_Master.appxupload', 'C:\Card-Game-Simulator.git', needs.buildWithWindows.outputs.buildVersion) }}
       - name: Upload to the Microsoft Store
         working-directory: C:/Card-Game-Simulator.git
         shell: pwsh
@@ -212,10 +238,10 @@ So I'll dump the code here, but I highly recommend you first skip past it and co
           STOREBROKER_CONFIG_PATH: ${{ format('{0}\storebroker\SBConfig.json', 'C:\Card-Game-Simulator.git') }}
           PDP_ROOT_PATH: ${{ format('{0}\storebroker\', 'C:\Card-Game-Simulator.git') }}
           IMAGES_ROOT_PATH: ${{ format('{0}\docs\assets\img\', 'C:\Card-Game-Simulator.git') }}
-          APPX_PATH: ${{ format('{0}\build\WSAPlayer\AppPackages\CardGameSimulator\CardGameSimulator_{1}.0_x64_bundle_Master.appxupload', 'C:\Card-Game-Simulator.git', needs.buildWithWindows.outputs.buildVersion) }}
-          OUT_PATH: ${{ format('{0}\build\WSAPlayer\', 'C:\Card-Game-Simulator.git') }}
-          SUBMISSION_DATA_PATH: ${{ format('{0}\build\WSAPlayer\upload.json', 'C:\Card-Game-Simulator.git') }}
-          PACKAGE_PATH: ${{ format('{0}\build\WSAPlayer\upload.zip', 'C:\Card-Game-Simulator.git') }}
+          APPX_PATH: ${{ format('{0}\build\WSAPlayer\WSAPlayer\AppPackages\CardGameSimulator\CardGameSimulator_{1}.0_x64_bundle_Master.appxupload', 'C:\Card-Game-Simulator.git', needs.buildWithWindows.outputs.buildVersion) }}
+          OUT_PATH: ${{ format('{0}\build\WSAPlayer\WSAPlayer\', 'C:\Card-Game-Simulator.git') }}
+          SUBMISSION_DATA_PATH: ${{ format('{0}\build\WSAPlayer\WSAPlayer\upload.json', 'C:\Card-Game-Simulator.git') }}
+          PACKAGE_PATH: ${{ format('{0}\build\WSAPlayer\WSAPlayer\upload.zip', 'C:\Card-Game-Simulator.git') }}
         run: |
           Install-Module -Name StoreBroker -AcceptLicense -Force
           $pass = ConvertTo-SecureString $env:MICROSOFT_KEY -AsPlainText -Force
