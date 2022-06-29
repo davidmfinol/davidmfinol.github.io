@@ -15,3 +15,8 @@ Please see [the Card Game Simulator website](https://www.cardgamesimulator.com/)
 - [GameCI 4: Build and Deploy with MacOS](gameci-4_mac.html)
 - [GameCI 5: Build and Deploy with Windows](gameci-5_windows.html)
 - [GameCI 6: Conclusion](gameci-6_conclusion.html)
+
+## Blog
+
+In addition to the GameCI articles, I wrote this too:
+- [Deep Linking Unity Desktop Games with Firebase Dynamic Links](blog/deep-link.html)

@@ -83,7 +83,7 @@ Most of this job should be self-explanatory after reading the [GameCI Builder do
 Instead of using a Linux runner, we need a Windows runner because Windows builds require Windows as a runner if using [IL2CPP as the scripting backend](https://docs.unity3d.com/Manual/IL2CPP.html). 
 Use IL2CPP for better run-time performance than Mono.
 
-The Windows executables can be deployed via Steam (see [GameCI 6: Conclusion](gameci-6_conclusion.html), but the `Zip Build` and `Upload Zip to GitHub Release` steps also enable players to get the builds from the GitHub Releases page.
+The Windows executables can be deployed via Steam (see [GameCI 6: Conclusion](gameci-6_conclusion.html)), but the `Zip Build` and `Upload Zip to GitHub Release` steps also enable players to get the builds from the GitHub Releases page.
 Note that the `Upload Zip to GitHub Release` step requires a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 You might also ask: Why does this job run after the Linux and Mac builds instead of in parallel to those builds?
