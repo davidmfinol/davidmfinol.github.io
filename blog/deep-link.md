@@ -14,8 +14,8 @@ However, there's a problem with using just the native solution: If a user clicks
 Most deep linking solutions get around this problem by introducing a URL that acts as a wrapper to the deep link.
 This URL first takes a user to a web page that can redirect the user to the appropriate app store that enables [Deferred Deep Linking](https://en.wikipedia.org/wiki/Mobile_deep_linking#Deferred_deep_linking).
 Building a platform to support this level of deep linking isn't something that I will do as a solo dev, so I naturally went looking for a free solution and found two options:
-a) [Branch.io](https://branch.io/)
-b) [Firebase Dynamic Links](https://firebase.google.com/docs/dynamic-links)
+- [Branch.io](https://branch.io/)
+- [Firebase Dynamic Links](https://firebase.google.com/docs/dynamic-links)
 
 Both platforms have support for Unity, so I originally decided to go with Branch.io, as the documentation seemed a bit friendlier to me.
 I was able to get links working for iOS and Android in a satisfactory way, but I was never able to get macOS and Windows links.
