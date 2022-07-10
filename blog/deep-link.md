@@ -155,12 +155,12 @@ I already mentioned that the native deep link implementation has a problem where
 So how does my solution work on desktop if the user doesn't already have my app installed?
 
 The answer lies in the "Dynamic Links" part of Firebase Dynamic Links.
-Note that it isn't called "Firebase Deep Links", as Firebase actually makes a distinction between it's dynamic links and traditional deep links.
+Note that it isn't called "Firebase Deep Links", as Firebase actually makes a distinction between its dynamic links and traditional deep links.
 Specifically, it treats each "dynamic link" as a web page that then redirects the user to an appropriate "deep link", depending on the platform of the user.
 If Firebase detects the user is on iOS or Android, that deep link is an appropriate implementation for that platform.
 However, if the user is on a non-mobile platform, the deep link is actually a link to another web page.
 
-In my case, I make use the fact that the user is redirected to another web page.
+In my case, I make use of the fact that the user is redirected to another web page.
 I can redirect the user to my website, which would then provide further options for redirection.
 Effectively, I've built multiple layers of links/redirects, and I think the best way to understand it is with an example that describes all those layers.
 
@@ -240,4 +240,4 @@ My app then takes the json from this url and uses it to display the appropriate 
 
 ## Conclusion
 
-I don't know if anyone else would want to set up a complicated system of deep links like I have done here, but I'm hoping this all this information is at least interesting to someone out there!
+I don't know if anyone else would want to set up a complicated system of deep links like I have done here, but I'm hoping all this information is at least interesting to someone out there!
