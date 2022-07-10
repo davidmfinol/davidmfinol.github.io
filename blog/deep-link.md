@@ -1,6 +1,6 @@
 # Deep Linking Unity Desktop Games with Firebase Dynamic Links
 
-Links to mobile apps with [Mobile Deep Linking](https://en.wikipedia.org/wiki/Mobile_deep_linking) is often seen as different than links intended for desktop use.
+Links to mobile apps with [Mobile Deep Linking](https://en.wikipedia.org/wiki/Mobile_deep_linking) are often seen as different than links intended for desktop use.
 In my eyes, however, this distinction is a bit silly, as the ultimate goal is to get a user to content within an app.
 There's no reason that you wouldn't want to direct users to content within an app on Windows or Mac.
 
