@@ -208,7 +208,7 @@ Also note that we use `fastlane/metadata/android/en-US/changelogs/default.txt` t
           WEBGL_PAGES_PATH: ${{ format('{0}/docs', github.workspace) }}
         run: cp -r $WEBGL_BUILD_PATH $WEBGL_PAGES_PATH;
       - name: Deploy to GitHub Pages
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           branch: main
           file_pattern: docs/**
