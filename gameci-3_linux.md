@@ -196,9 +196,9 @@ Also note that we use `fastlane/metadata/android/en-US/changelogs/default.txt` t
     if: github.event.action == 'published' || (contains(github.event.inputs.workflow_mode, 'release') && contains(github.event.inputs.workflow_mode, 'WebGL'))
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Download WebGL Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: cgs-WebGL
           path: build/WebGL
