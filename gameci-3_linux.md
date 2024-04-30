@@ -204,9 +204,9 @@ Also note that we use `fastlane/metadata/android/en-US/changelogs/default.txt` t
           path: build/WebGL
       - name: Copy the WebGL build artifacts to the GitHub Pages directory
         env:
-          WEBGL_BUILD_PATH: ${{ format('{0}/build/WebGL', github.workspace) }}
-          WEBGL_PAGES_PATH: ${{ format('{0}/docs/WebGL', github.workspace) }}
-        run: find $WEBGL_BUILD_PATH -type f -name "**WebGL.*" -exec cp {} $WEBGL_PAGES_PATH \;
+          WEBGL_BUILD_PATH: ${{ format('{0}/build/WebGL/WebGL/.', github.workspace) }}
+          WEBGL_PAGES_PATH: ${{ format('{0}/docs', github.workspace) }}
+        run: cp -r $WEBGL_BUILD_PATH $WEBGL_PAGES_PATH;
       - name: Deploy to GitHub Pages
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
