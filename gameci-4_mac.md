@@ -11,7 +11,7 @@ Continuing from [GameCI 3](gameci-3_linux.html), let's examine the `Build with M
     runs-on: macos-latest
     needs: tests
     outputs:
-      buildVersion: ${{ steps.build.outputs.buildVersion }}
+      buildVersion: ${{ steps.buildStep.outputs.buildVersion }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -36,7 +36,7 @@ Continuing from [GameCI 3](gameci-3_linux.html), let's examine the `Build with M
           key: Library-buildMac-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
           restore-keys: Library-buildMac-
       - name: Build Unity Project
-        id: build
+        id: buildStep
         uses: game-ci/unity-builder@v2
         env:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}

@@ -11,7 +11,7 @@ Continuing from [GameCI 4](gameci-4_mac.html), let's examine the `Build with Win
     runs-on: windows-2019
     needs: [buildWithLinux, buildWithMac]
     outputs:
-      buildVersion: ${{ steps.build.outputs.buildVersion }}
+      buildVersion: ${{ steps.buildStep.outputs.buildVersion }}
     strategy:
       fail-fast: false
       matrix:
@@ -44,7 +44,7 @@ Continuing from [GameCI 4](gameci-4_mac.html), let's examine the `Build with Win
             Library-buildWindows-${{ matrix.targetPlatform }}-
             Library-buildWindows-
       - name: Build Unity Project
-        id: build
+        id: buildStep
         uses: game-ci/unity-builder@v2
         env:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}

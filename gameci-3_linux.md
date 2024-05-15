@@ -23,7 +23,7 @@ Make sure to have read the [GameCI GitHub docs](https://game.ci/docs/github/gett
           - StandaloneLinux64
           - WebGL
     outputs:
-      buildVersion: ${{ steps.build.outputs.buildVersion }}
+      buildVersion: ${{ steps.buildStep.outputs.buildVersion }}
     steps:
       - name: Free Disk Space for Android
         if: matrix.targetPlatform == 'Android'
@@ -61,7 +61,7 @@ Make sure to have read the [GameCI GitHub docs](https://game.ci/docs/github/gett
             Library-build-${{ matrix.targetPlatform }}-
             Library-build-
       - name: Build Unity Project
-        id: build
+        id: buildStep
         uses: game-ci/unity-builder@v2
         env:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
