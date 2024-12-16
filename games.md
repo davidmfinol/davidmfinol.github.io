@@ -44,16 +44,6 @@ Originally titled "The Runners", this passion project turned out to be a bit of 
 As a mobile game, we developed a unique control system that allowed for stealth platforming using a combination of swiping on the screen. 
 The AI for this game turned out to be the largest hurdle, as the core gameplay hinged on having enemy robots that were able to effectively traverse through 2D platforming in order to hunt down the player-character.
 
-## FloodFlow
-
-{% include youtubePlayer.html id=page.floodflowYoutubeId %}
-
-[itch.io](https://nlcsc.itch.io/floodflow)
-
-At the [Hoft Game Development Lab](https://www.gamedevelopmentlab.com/), I worked with fellow students to create FloodFlow. 
-I was the only programmer on this project, so we made good use of Unreal Blueprints and their asset store. 
-The challenge with this game was getting fun and realistic water movement mechanics, while keeping performance up.
-
 ## HeartLight
 
 {% include youtubePlayer.html id=page.heartlightYoutubeId %}
@@ -93,3 +83,13 @@ This tale of space vikings comes from the final capstone course of the [UT Game 
 In this project, I worked with the artists and other programmers to layout the 2D assets in-game, with appropriate mechanics. 
 In particular, I developed all the AI for the enemies in the game. 
 I also played a large role in defining the actions the player character could take, such as climbing over platforms, and jumping off cliffs.
+
+## FloodFlow
+
+![FloodFlow](assets/img/floodflow.png)
+
+[itch.io](https://nlcsc.itch.io/floodflow)
+
+At the [Hoft Game Development Lab](https://www.gamedevelopmentlab.com/), I worked with fellow students to create FloodFlow. 
+I was the only programmer on this project, so we made good use of Unreal Blueprints and their asset store. 
+The challenge with this game was getting fun and realistic water movement mechanics, while keeping performance up.

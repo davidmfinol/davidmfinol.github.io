@@ -1,6 +1,6 @@
 Welcome to my personal website!
 
-Since you're here, you may be interested in my [portfolio](portfolio.html), or my [LinkedIn](https://www.linkedin.com/in/davidmfinol/).
+Since you're here, you may be interested in my [games](games.html), or my [LinkedIn](https://www.linkedin.com/in/davidmfinol/).
 
 ## Card Game Simulator
 

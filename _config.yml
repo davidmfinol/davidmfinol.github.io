@@ -16,5 +16,5 @@ minima:
     facebook: davidmfinol
     linkedin: davidmfinol
 header_pages:
-  - portfolio.md
-url: 'https://davidmfinol.website'
+  - games.md
+url: 'https://davidmfinol.com'
