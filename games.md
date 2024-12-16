@@ -8,9 +8,9 @@ homebodyYoutubeId: sLGs-B7t3JI
 vikingsYoutubeId: j6InP6j7MmY
 ---
 
-# Portfolio
+# Games
 
-Here are some portfolio pieces; CGS and GameCI are the two big ones.
+Here are some of my game projects; CGS and GameCI are the two big ones.
 
 ## Card Game Simulator
 
